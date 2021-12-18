@@ -1,0 +1,1365 @@
+:root {
+	--nav_btn_color: url('imgs/icon_hamburger_menu.png');
+	--faq-list-item-bg: linear-gradient(to right top, #2f0092, #6a24ff);
+}
+
+html, p, h1, h2, h3, ul {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.foo {
+	display: none;
+}
+
+.wrapper {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Langs control (MOBILE version) ------------------------------------------------------------------------------------------------------------------------------------------- */
+.logo {
+	position: relative;
+	cursor: pointer;
+}
+
+.langs {
+	cursor: pointer;
+}
+
+.arrow_langs {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 2px;
+    right: -37px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.arrow_langs::before {
+    content: '';
+    position: absolute;
+    border-bottom: 4px solid #3d1c9f;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    transform: translate(4px, 6px) rotate(180deg);
+}
+
+.langs li {
+    width: 29px;
+    height: 21px;
+    position: absolute;
+ 	top: 0;
+    right: -30px;
+}
+
+.langs li:first-child {
+    background: center / contain no-repeat url(imgs/english.png);
+    z-index: 3;
+}
+
+.langs li:nth-child(2) {
+    background: center / contain no-repeat url(imgs/german.png);
+    z-index: 2;
+}
+
+.langs li:last-child {
+    background: center / contain no-repeat url(imgs/italy.png);
+    z-index: 1;
+}
+
+/* Langs control END --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.wrapper_desktop_nav {
+	display: none;
+}
+
+.wrapper_nav .social_btns {
+	display: none;
+}
+
+.sign_up_cta {
+	display: none;
+}
+
+.mobile_header {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 23px;
+	padding-bottom: 23px;
+}
+
+.mobile_nav {
+	position: absolute;
+    top: 87px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.mobile_nav_list li {
+	text-align: center;
+	padding-top: 23px;
+	padding-bottom: 23px;
+	border-bottom: 1px solid #e1e0e0;	
+}
+
+.icon_facebook,
+.icon_twitter,
+.icon_youtube {
+	width: 32px;
+	height: 32px;
+	display: block;
+}
+
+.icon_facebook {
+	background-image: url('imgs/icon_facebook.png');
+}
+
+.icon_twitter {
+	background-image: url('imgs/icon_twitter.png');
+}
+
+.icon_youtube {
+	background-image: url('imgs/icon_youtube.png');
+}
+
+.nav_btn {
+	width: 43px;
+	height: 40px;
+	background-image: var(--nav_btn_color);
+}
+
+.nav_btn:hover {
+	cursor: pointer;
+	width: 43px;
+	height: 40px;
+	background-image: url('imgs/icon_hamburger_menu_active.png');
+}
+
+.mobile_nav_item {
+	font-size: 25px;
+	color: #2f0092;
+}
+
+.mobile_nav_cta {
+	background-color: #2f0092;
+	display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.social_icons_list {
+	display: flex;
+	flex-direction: row;
+}
+
+.social_icons_list li {
+	margin-right: 8px;
+}
+
+.social_icons_list li:last-child {
+	margin-right: 0;
+}
+
+.login_cta {
+	font-size: 25px;
+	color: #fff;
+}
+
+/* Hero --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#hero_section {
+	min-height: 646px;
+	background-image: url('imgs/slide_1.png');
+	background-position: 60% 0%;
+	position: relative;
+}
+
+.wrapper_hero_text {
+	width: 276px;
+	padding-top: 50px;
+}
+
+.hero_heading {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 35px;
+	font-weight: 700;
+	line-height: 1.2;
+	color: #fff;
+}
+
+.hero_description {
+	font-size: 35px;
+	font-weight: 300;
+	line-height: 1.2;
+	color: #fff;
+}
+
+.text_higlights_on_dark {
+	color: #7dc7f4;
+}
+
+.wrapper_features {
+	background-color: #2f0092;
+}
+
+.feature_item_heading {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #7dc7f4;
+	line-height: 1;
+}
+
+.feature_item_text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	color: #fff;
+	line-height: 1;
+}
+
+.features_list {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.features_list li {
+	min-width: 137px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+.features_list li:nth-child(5), .features_list li:last-child {
+	margin-bottom: 0;
+}
+
+/* Hero END --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* About --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#about_section {
+	background-color: #faf9fa;
+}
+
+.wrapper_section_content {
+	padding-top: 86px;
+	padding-bottom: 86px;
+}
+
+.text_higlights_on_white {
+	color: #2f0092;
+}
+
+.secondary_heading {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 25px;
+	font-weight: 700;
+	color: #1d2121;
+	line-height: 1.2;
+}
+
+.secondary_description {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #787186;
+	margin-top: 15px;
+}
+
+.wrapper_more_content {
+	margin-top: 50px;
+}
+
+.icons_about_list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.icons_about_list li {
+	max-width: 1550px;
+	width: 274px;
+	height: 290px;
+    background: center no-repeat url(imgs/icon_ovelay.png);
+    position: relative;
+    text-align: center;
+    margin-bottom: 23px;
+}
+
+.icons_about_list li:last-child {
+	margin-bottom: 0;
+}
+
+.icon_license,
+.icon_funds,
+.icon_specialists,
+.icon_global {
+	display: inline-block;
+	width: 181px;
+	height: 159px;
+	position: absolute;
+	top: 10px;
+	left: 47px;
+}
+
+
+.icon_license {
+	background-image: url(imgs/icon_license.png);
+}
+
+.icon_funds {
+	background: url(imgs/icon_funds.png);
+}
+
+.icon_specialists {
+	background: url(imgs/icon_specialists.png);
+}
+
+.icon_global {
+	background: url(imgs/icon_global.png);
+}
+
+.icon_about_heading {
+	display: inline-block;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #787186;
+}
+
+.icon_about_text {
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #787186;
+	width: 250px;
+}
+
+.icons_about_list_text {
+	position: absolute;
+	bottom: 35px;
+	left: 0;
+}
+
+/* About END --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Benefits --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+#benefits_section {
+	background-image: url(imgs/slide_2.png);
+    background-position: 43% 0%;
+    background-size: cover;
+}
+
+#benefits_section .secondary_heading, 
+#benefits_section .secondary_description {
+	color: #fff;
+}
+
+.benefits_heading {
+	font-family: 'Work Sans', serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.benefits_text {
+    font-family: 'Open Sans', serif;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #787186;
+    width: 80%;
+}
+
+#benefits_section .wrapper_more_content {
+	max-width: 953px;
+}
+
+.benefits_icon_1 {
+	width: 44px;
+	height: 44px;
+	background: no-repeat url('imgs/icon_1.png');
+}
+
+.benefits_icon_2 {
+	width: 44px;
+	height: 37px;
+	background: no-repeat url('imgs/icon_2.png');
+	
+}
+
+.benefits_icon_3 {
+	width: 34px;
+	height: 34px;
+	background: no-repeat url('imgs/icon_3.png');	
+}
+
+.benefits_icon_4 {
+	width: 42px;
+	height: 44px;
+	background: no-repeat url('imgs/icon_4.png');
+}
+
+.benefits_icon_5 {
+	width: 37px;
+	height: 38px;
+	background: no-repeat url('imgs/icon_5.png');
+}
+
+.benefits_icon_6 {
+	width: 36px;
+	height: 34px;
+	background: no-repeat url('imgs/icon_6.png');
+}
+
+#benefits_section .wrapper_more_content {
+	display: flex;
+	flex-wrap: wrap;	
+}
+
+.benefits_list {
+	margin-top: 15px;
+}
+
+.benefits_list li {
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	max-width: 450px;
+	min-height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: #fff;
+	border-radius: 5px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+} 
+
+.benefits_right_col {
+	margin-top: 50px;
+}
+
+.benefits_left_col .benefits_list li:last-child,
+.benefits_right_col .benefits_list li:last-child {
+	margin-bottom: 0;
+}
+
+
+/* Benefits END --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Markets --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.icon_forex {
+	width: 91px;
+	height: 78px;
+	background: center no-repeat url('imgs/icon_forex.png');
+
+}
+
+.icon_metals {
+	width: 115px;
+	height: 74px;
+	background: center no-repeat url('imgs/icon_metals.png');
+
+}
+
+.icon_indices {
+	width: 95px;
+	height: 74px;
+	background: center no-repeat url('imgs/icon_indices.png');
+
+}
+
+.icon_energies {
+	width: 86px;
+	height: 81px;
+	background: center no-repeat url('imgs/icon_energies.png');
+
+}
+
+.icon_crypto {
+	width: 95px;
+	height: 75px;
+	background: center no-repeat url('imgs/icon_crypto.png');
+
+}
+
+.icon_shares {
+	width: 95px;
+	height: 75px;
+	background: center no-repeat url('imgs/icon_shares.png');
+}
+
+.icons_markets_list .icon_heading {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #787186;
+	display: inline-block;
+	margin-top: 12px;
+}
+
+.icons_markets_list .icon_text {
+	display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #787186;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.icons_markets_list {
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.icons_markets_list li {
+    max-width: 230px;
+    width: 48%;
+    box-shadow: 0px 0px 10px 1px rgb(243 226 247 / 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.icons_markets_list li:nth-child(2),
+.icons_markets_list li:nth-child(4),
+.icons_markets_list li:nth-child(6) {
+	margin-right: 0;
+}
+
+
+/* Markets END --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* CTA --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+#cta_section {
+	background-image: url(imgs/color_bg.png);
+    background-position: top left;
+    background-size: cover;
+}
+
+#cta_section .secondary_heading,
+#cta_section .secondary_description {
+	text-align: center;
+	color: #fff;
+}
+
+.btn_register {
+	display: block;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2f0092;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #fff;
+    width: 160px;
+    position: relative;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.btn_register::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -19px;
+    border-right: 20px solid #fff;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+}
+
+.btn_register::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -19px;
+    border-left: 20px solid #fff;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+}
+
+
+
+/* CTA END --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Download  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#download_section {
+	background-image: url(imgs/slide_3.png);
+    background-position: 43% 0%;
+    background-size: cover;
+}
+
+#download_section .secondary_description {
+	margin-top: 0;
+}
+
+#download_section .subheading {
+	font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #787186;
+    margin-top: 15px;
+}
+
+.btn_download {
+	display: block;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 160px;
+    position: relative;
+    margin: auto;
+    margin-top: 40px;
+    z-index: 1;
+}
+
+.btn_download::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -15px;
+	width: 191px;
+	height: 41px;
+	background-image: url(imgs/btn_download.png);
+	z-index: -1;
+}
+
+
+/* Download END -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* FAQ -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#faq_section {
+	background-color: #faf9fa;
+}
+
+.faq_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.faq_list_item {
+	position: relative;
+    width: 50%;
+    height: 70px;
+    box-sizing: border-box;
+    background: linear-gradient(to right top, #2f0092, #6a24ff);
+    border-radius: 0px 15px 15px 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 512px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+/*.faq_list .active {
+	position: relative;
+    width: 50%;
+    height: 70px;
+    box-sizing: border-box;
+    background: linear-gradient(to right top, #f79024, #ef2152);
+    border-radius: 0px 5px 5px 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 512px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}*/
+
+.faq_list_item:last-child {
+	margin-bottom: 0;
+}
+
+.faq_list_item::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 203px;
+	height: 70px;
+	background-image: url(imgs/faq_dots_overlay.png);
+	opacity: 0.4;
+}
+
+.question {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	width: 80%;
+}
+
+.wrapper_answer {
+	display: none;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	background-color: #fff;
+	padding: 15px;
+	padding-bottom: 20px;
+	z-index: 5;
+	border-radius: 0px 0px 5px 5px;
+}
+
+.answer {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #787186;
+}
+
+.icon_faq_arrow {
+	display: block;
+	width: 46px;
+	height: 46px;
+	background-image: url(imgs/icon_faq_arrow.png);
+	z-index: 2;
+}
+
+
+/* FAQ END -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Footer  -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.footer {
+	background-color: #2f0092;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+
+.footer_top {
+	padding-bottom: 15px;
+	border-bottom: 1px solid #402ca8;
+	position: relative;
+}
+	
+.footer_bottom	{
+	padding-bottom: 20px;
+	border-bottom: 1px solid #402ca8;
+}
+
+.footer_nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.footer_nav_item {
+	color: #fff;
+	margin-top: 5px;
+}
+
+.footer_bottom .social_btns {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.footer_bottom .social_icons_list {
+	justify-content: center;
+}
+
+.disclaimer_text {
+	color: #9891fd;
+	font-size: 12px;
+}
+
+.disclaimer_text:nth-child(2) {
+	margin-top: 10px;
+}
+
+.copyrights {
+	font-size: 12px;
+	color: #fff;
+	margin: auto;
+	text-align: center;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.icon_master {
+	width: 53px;
+	height: 41px;
+	background: no-repeat url(imgs/icon_master.png);
+}
+
+.icon_visa {
+	width: 66px;
+	height: 41px;
+	background: no-repeat url(imgs/icon_visa.png);
+}
+
+.icon_bank {
+	width: 40px;
+	height: 41px;
+	background: no-repeat url(imgs/icon_bank.png);
+}
+
+.icon_bitcoin {
+	width: 41px;
+	height: 41px;
+	background: no-repeat url(imgs/icon_bitcoin.png);
+}
+
+.payments_icons_list {
+	display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    justify-content: space-evenly;
+    max-width: 270px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.payments_icons_list li {
+	margin-bottom: 10px;
+}
+
+.payments_icons_list li:nth-child(3),
+.payments_icons_list li:nth-child(4) {
+	margin-bottom: 0;
+}
+
+/* Footer END  -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Media Queries ---------------------------------------------------------------------------------------------------------------------------------  */
+
+@media only screen and (min-width: 599px) {
+
+
+	.wrapper{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.mobile_nav_cta .social_icons_list {
+		display: none;
+	}
+
+	.sign_up_cta {
+		display: block;
+		font-size: 25px;
+    	color: #fff;
+	}
+
+	.mobile_nav_cta {
+		padding-top: 30px;
+    	padding-bottom: 30px;
+	}
+
+	.wrapper_nav .social_btns {
+		display: block;
+	}
+
+	.footer_bottom .social_btns {
+		display: none;
+	}
+
+	.wrapper_nav {
+		display: flex;
+    	align-items: center;
+	}
+	
+	.nav_btn {
+		margin-left: 20px;
+	}
+
+	.hero_heading {
+    	font-size: 50px;
+    }
+
+    .hero_description {
+    	font-size: 50px;
+    }
+
+    .wrapper_hero_text {
+    	width: 350px;
+    }
+
+    .features_list {
+    	width: 500px;
+    	margin: auto;
+    }
+}
+
+@media only screen and (min-width: 959px) {
+
+	.wrapper {
+		padding-left: 65px;
+		padding-right: 65px;
+	}
+	
+	.hero_heading {
+		font-size: 86px;
+	}
+
+	.hero_description {
+		font-size: 60px;
+	}
+
+	.secondary_heading {
+		font-size: 35px;
+	}
+
+	.secondary_description {
+		margin-top: 0;
+		font-size: 18px;
+	}
+
+	#benefits_section .wrapper_text {
+		width: 550px;
+	}
+
+	.feature_item_heading {
+		font-size: 18px;
+	}
+
+	.feature_item_text {
+		font-size: 14px;
+	}
+
+	.icon_about_heading {
+		font-size: 18px;
+	}
+
+	.icon_about_text {
+		font-size: 14px;
+	}
+
+	.benefits_heading {
+		font-size: 18px;
+	}
+
+	.benefits_text {
+		font-size: 14px;
+	}
+
+	.icons_markets_list .icon_heading {
+		font-size: 18px;
+	}
+
+	.icons_markets_list .icon_text {
+		font-size: 14px;
+	}
+
+	#download_section .subheading {
+		font-size: 25px;
+	}
+
+	.question {
+		font-size: 18px;
+	}
+
+	.answer {
+		font-size: 16px;
+	}
+
+	.footer_nav_item {
+		font-size: 16px;
+	}
+
+	.disclaimer_text {
+		font-size: 14px;
+		width: 49%;
+	}
+
+	.copyrights {
+		font-size: 14px;
+	}
+
+	.wrapper_hero_text {
+		width: 610px;
+	}
+
+	.hero_description {
+		width: 500px;
+	}
+
+	.features_list {
+    	width: 630px;
+    }
+
+    #hero_section {
+  	  background-position: 48% 0%;
+  	}
+
+  	.features_list li {
+  		width: 30%;
+  	}
+
+  	.features_list li:nth-child(4) {
+		margin-bottom: 0;
+  
+	}
+
+	.features_list li:first-child,
+	.features_list li:nth-child(2),
+	.features_list li:nth-child(3) {
+		margin-bottom: 40px;
+	}
+
+	.icons_about_list li {
+	    width: 407px;
+	    height: 320px;
+	    background: center no-repeat url(imgs/icon_ovelay_m.png);
+	    margin-bottom: 0;
+	}
+
+	.icon_license, 
+	.icon_funds, 
+	.icon_specialists, 
+	.icon_global {
+	    top: 25px;
+	    left: 114px;
+	}
+
+	.benefits_right_col {
+		margin-top: 0;
+	}
+
+	.benefits_list li {
+ 		height: 108px;
+
+	}
+
+	#benefits_section .wrapper_more_content {
+	    justify-content: space-between;
+	}
+
+	#benefits_section {
+    	background-position: 75% 0%;
+    }
+
+    .icons_markets_list li {
+	    max-width: 240px;
+	    margin-bottom: 24px;
+	    margin-left: 24px;
+	    padding-left: 18px;
+	    padding-right: 18px;
+	    padding-top: 30px;
+	    padding-bottom: 30px;
+   }
+
+   .icons_markets_list li:first-child,
+   .icons_markets_list li:nth-child(4) {
+   		margin-left: 0;
+   }
+
+   .icons_markets_list li:nth-child(4),
+   .icons_markets_list li:nth-child(5),
+   .icons_markets_list li:nth-child(6), {
+   		margin-bottom: 0;
+   }
+
+   #markets_section .wrapper_text {
+   		width: 670px;
+   		line-height: 1.3;
+   	}
+   	
+   	#download_section {
+   		background: url(imgs/downloads_bg_m.png);
+   		background-position-y: -74px;
+   	}
+
+   	#download_section .secondary_description {
+   		width: 680px;
+   	}
+
+   	.faq_list_item {
+   		margin-right: 20px;
+   		width: 47%;
+   	}
+
+   	.faq_list_item:nth-child(2),
+   	.faq_list_item:nth-child(4),
+   	.faq_list_item:nth-child(6),
+   	.faq_list_item:nth-child(8) {
+   		margin-right: 0;
+   	}
+
+   	.footer_nav {
+	    display: flex;
+	    flex-direction: row;
+	}
+
+	.wrapper_footer_nav {
+		display: flex;
+	}
+
+	.footer_nav_item:first-child {
+		margin-top: 0;
+		background: no-repeat url('imgs/footer_trading_overlay.png');
+	    display: block;
+	    width: 210px;
+	    height: 41px;
+	    padding-top: 9px;
+	    text-align: center;
+	}
+
+	.footer_nav_item:nth-child(2) {
+		margin-top: 0;
+		margin-left: 5px;
+		background: no-repeat url('imgs/footer_about_overlay.png');
+	    display: block;
+	    width: 127px;
+	    height: 41px;
+	    padding-top: 9px;
+	    text-align: center;
+	}
+
+	.disclaimer {
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+
+	.disclaimer_text:nth-child(2) {
+    	margin-top: 0px;
+	}
+
+	.footer_bottom {
+		padding-top: 20px;
+	}
+}
+
+
+@media only screen and (min-width: 1279px) {
+	
+	.mobile_nav {
+		display: none;
+	}
+
+	.wrapper_hero_text {
+	    padding-top: 150px;
+	}
+
+	.hero_description {
+		width: 100%;
+	}
+
+	.features_list, 
+	.features_list li,
+	#markets_section .wrapper_text {
+    	width: unset;
+	}
+
+	.features_list li:first-child, .features_list li:nth-child(2), .features_list li:nth-child(3) {
+    	margin-bottom: 0;
+	}
+
+	.icons_about_list,
+	.icons_markets_list {
+    	justify-content: space-between;
+	}
+
+	.icons_about_list li {
+		ackground: center no-repeat url(imgs/icon_ovelay_l.png);
+	    margin-bottom: 0;
+	}
+
+
+	#benefits_section .wrapper_text {
+    	width: 55%;
+	}
+
+	#download_section {
+	    background: url(imgs/slide_3.png);
+	    height: 550px;
+	}
+
+	.btn_download {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.faq_list_item:nth-child(2),
+   	.faq_list_item:nth-child(4),
+   	.faq_list_item:nth-child(6),
+   	.faq_list_item:nth-child(8) {
+   		margin-right: 20px;
+   	}
+
+   	.wraper_desktop_nav {
+   		display: block;
+   	}
+
+   	.mobile_header {
+   		display: none;
+   	}
+
+   	.icon_english {
+   		display: block;
+		width: 29px;
+		height: 21px;
+   		background: center / contain no-repeat url(imgs/english.png);
+	}
+
+   	.icon_german {
+   		display: block;
+   		width: 29px;
+		height: 21px;
+	    background: center / contain no-repeat url(imgs/german.png);		
+   	}
+
+   	.icon_italian {
+   		display: block;
+   		width: 29px;
+		height: 21px;
+		background: center / contain no-repeat url(imgs/italy.png);
+   	}
+
+   	.wrapper_desktop_nav {
+   		display: flex;
+   		align-items: center;
+   		justify-content: space-between;
+   		background: transparent;
+   		padding-top: 23px;
+    	padding-bottom: 23px;
+   	}
+
+   	.foo {
+	    width: 920px;
+	    height: 92px;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    border-right: 57px solid transparent;
+	    border-top: 92px solid #fff;
+	    display: block;
+   	}
+
+   	.wrapper_desktop_nav .logo {
+   		flex-grow: 1;
+   	}
+
+   	.wrapper_desktop_nav .social_btns {
+   		flex-grow: 3;
+   	}
+
+   	.desktop_nav_list {
+   		display: flex;
+   		flex-grow: 1;
+   		z-index: 1;
+	}
+
+	.desktop_nav_item {
+		margin-left: 45px;
+		font-size: 18px;
+		font-weight: 400;
+		color: #2f0092;
+	}
+
+	.desktop_nav_item:hover {
+		color: #7dc7f4;
+	}
+
+	.desktop_cta {
+		display: flex;
+		align-items: center;
+		flex-grow: 0;
+	}
+
+	.langs_list {
+		display: flex;
+	}
+
+	.langs_list li {
+		margin-right: 6px;
+		opacity: .3;
+	}
+
+	.langs_list li:last-child {
+		margin-right: 0;
+	}
+
+	.langs_list .lang_active {
+		opacity: 1;
+	}
+
+	.btn_login {
+	    display: block;
+	    font-family: 'Work Sans', sans-serif;
+	    font-size: 16px;
+	    font-weight: 700;
+	    color: #fff;
+	    position: relative;
+	    padding: 7px;
+    	padding-left: 27px;
+	    z-index: 1;
+	    margin-right: 45px;
+	}
+
+	.btn_login::before {
+	    content: '';
+	    width: 104px;
+	    height: 41px;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    background: url(imgs/btn_login.png);
+	    z-index: -1;
+	}
+
+	#about_section {
+		background: url('imgs/about_section_bg.png');
+	}
+
+
+
+
+
+
+
+
+
+
+
+
