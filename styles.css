@@ -99,6 +99,7 @@ body {
 }
 
 .mobile_nav {
+	display:none;
 	position: absolute;
     top: 87px;
     left: 0;
@@ -1173,10 +1174,10 @@ body {
 
 @media only screen and (min-width: 1279px) {
 	
-	.mobile_nav {
+/* 	.mobile_nav {
 		display: none;
 	}
-
+ */
 	.wrapper_hero_text {
 	    padding-top: 150px;
 	}
