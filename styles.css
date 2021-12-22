@@ -27,6 +27,8 @@ body {
 /* Langs control (MOBILE version) ------------------------------------------------------------------------------------------------------------------------------------------- */
 .logo {
 	position: relative;
+	top: 0;
+	left: 0;
 	cursor: pointer;
 }
 
@@ -48,6 +50,8 @@ body {
 .arrow_langs::before {
     content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     border-bottom: 4px solid #3d1c9f;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
@@ -99,7 +103,7 @@ body {
 }
 
 .mobile_nav {
-	display:none;
+	display: none;
 	position: absolute;
     top: 87px;
     left: 0;
@@ -187,6 +191,8 @@ body {
 	background-image: url('imgs/slide_1.png');
 	background-position: 60% 0%;
 	position: relative;
+	top: 0;
+	left: 0;
 }
 
 .wrapper_hero_text {
@@ -299,45 +305,86 @@ body {
 }
 
 .icons_about_list li {
-	max-width: 1550px;
-	width: 274px;
-	height: 290px;
-    background: center no-repeat url(imgs/icon_ovelay.png);
-    position: relative;
+	max-width: 372px;
+    width: 100%;
     text-align: center;
+    filter: drop-shadow(0px 0px 10px rgba(243, 226, 247, 0.9));
+    background: #fff;
+    height: 205px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 85px;
     margin-bottom: 23px;
+    border-radius: 5px;
 }
 
 .icons_about_list li:last-child {
 	margin-bottom: 0;
 }
 
-.icon_license,
-.icon_funds,
-.icon_specialists,
-.icon_global {
-	display: inline-block;
-	width: 181px;
-	height: 159px;
-	position: absolute;
-	top: 10px;
-	left: 47px;
+.icon_about_overlay {
+	box-sizing: border-box;
+	display: block;
+    width: 200px;
+    height: 285px;
+    background: #fff;
+    clip-path: polygon(100% 100%, 0 100%, 0 30%, 0% 31%, 26% 0%, 74% 0%, 100% 31%, 100% 30%);
+    margin: auto;
+    padding-top: 8px;
+    position: relative;
+    top: -87px;
+    left: 0;
+}
+
+.icon_about_overlay::before {
+	content: '';
+    display: block;
+    width: 180px;
+    height: 160px;
+    margin: auto;
+    clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+    background: linear-gradient(to top, #2f0092, #6a24ff);
 }
 
 
 .icon_license {
-	background-image: url(imgs/icon_license.png);
+	display: block;
+    width: 101px;
+    height: 91px;
+    position: relative;
+    top: -128px;
+    margin: auto;
+    background-image: url(imgs/icon_license.png);
 }
 
 .icon_funds {
+	display: block;
+    width: 88px;
+    height: 88px;
+    position: relative;
+    top: -128px;
+    margin: auto;
 	background: url(imgs/icon_funds.png);
 }
 
 .icon_specialists {
+	display: block;
+    width: 78px;
+    height: 79px;
+    position: relative;
+    top: -128px;
+    margin: auto;
 	background: url(imgs/icon_specialists.png);
 }
 
 .icon_global {
+	display: block;
+    width: 73px;
+    height: 80px;
+    position: relative;
+    top: -128px;
+    margin: auto;
 	background: url(imgs/icon_global.png);
 }
 
@@ -355,13 +402,15 @@ body {
 	font-size: 14px;
 	font-weight: 400;
 	color: #787186;
-	width: 250px;
+/*	width: 250px;*/
 }
 
 .icons_about_list_text {
 	position: absolute;
-	bottom: 35px;
-	left: 0;
+    top: 70px;
+    left: -45px;
+    transform: translate(50%, 50%);
+    width: 230px;
 }
 
 /* About END --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -588,6 +637,8 @@ body {
     background-color: #fff;
     width: 160px;
     position: relative;
+    top: 0;
+    left: 0;
     margin: auto;
     margin-top: 40px;
 }
@@ -647,6 +698,8 @@ body {
     text-align: center;
     width: 160px;
     position: relative;
+    top: 0;
+    left: 0;
     margin: auto;
     margin-top: 40px;
     z-index: 1;
@@ -679,6 +732,8 @@ body {
 
 .faq_list_item {
 	position: relative;
+	top: 0;
+	left: 0;
     width: 50%;
     height: 70px;
     box-sizing: border-box;
@@ -776,6 +831,8 @@ body {
 	padding-bottom: 15px;
 	border-bottom: 1px solid #402ca8;
 	position: relative;
+	top: 0;
+	left: 0;
 }
 	
 .footer_bottom	{
@@ -1046,21 +1103,6 @@ body {
 		margin-bottom: 40px;
 	}
 
-	.icons_about_list li {
-	    width: 407px;
-	    height: 320px;
-	    background: center no-repeat url(imgs/icon_ovelay_m.png);
-	    margin-bottom: 0;
-	}
-
-	.icon_license, 
-	.icon_funds, 
-	.icon_specialists, 
-	.icon_global {
-	    top: 25px;
-	    left: 114px;
-	}
-
 	.benefits_right_col {
 		margin-top: 0;
 	}
@@ -1174,10 +1216,10 @@ body {
 
 @media only screen and (min-width: 1279px) {
 	
-/* 	.mobile_nav {
+	/*.mobile_nav {
 		display: none;
-	}
- */
+	}*/
+
 	.wrapper_hero_text {
 	    padding-top: 150px;
 	}
@@ -1199,11 +1241,6 @@ body {
 	.icons_about_list,
 	.icons_markets_list {
     	justify-content: space-between;
-	}
-
-	.icons_about_list li {
-		ackground: center no-repeat url(imgs/icon_ovelay_l.png);
-	    margin-bottom: 0;
 	}
 
 
@@ -1332,6 +1369,8 @@ body {
 	    font-weight: 700;
 	    color: #fff;
 	    position: relative;
+	    top: 0;
+	    left: 0;
 	    padding: 7px;
     	padding-left: 27px;
 	    z-index: 1;
