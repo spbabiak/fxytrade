@@ -630,53 +630,30 @@ body {
 }
 
 .btn_register {
+	box-sizing: border-box;
 	display: block;
+    padding-top: 12px;
+    text-align: center;
+    background-color: #fff;
+    width: 190px;
+    height: 48px;
+    margin: auto;
+    margin-top: 40px;
+    clip-path: polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
     font-weight: 700;
     color: #2f0092;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    background-color: #fff;
-    width: 160px;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: auto;
-    margin-top: 40px;
 }
-
-.btn_register::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -19px;
-    border-right: 20px solid #fff;
-    border-top: 22px solid transparent;
-    border-bottom: 22px solid transparent;
-}
-
-.btn_register::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -19px;
-    border-left: 20px solid #fff;
-    border-top: 22px solid transparent;
-    border-bottom: 22px solid transparent;
-}
-
-
 
 /* CTA END --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Download  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #download_section {
-	background-image: url(imgs/slide_3.png);
-    background-position: 43% 0%;
-    background-size: cover;
+	background-image: url(imgs/downloads_bg_m.png);
+    background-position: 52% 35%;
+    background-repeat: no-repeat;
 }
 
 #download_section .secondary_description {
@@ -692,32 +669,20 @@ body {
 }
 
 .btn_download {
+	box-sizing: border-box;
 	display: block;
+    padding-top: 12px;
+    text-align: center;
+    background: linear-gradient(20deg, #2f0092, #7dc7f4);
+    width: 190px;
+    height: 48px;
+    margin: auto;
+    margin-top: 40px;
+    clip-path: polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
     font-weight: 700;
     color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    width: 160px;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: auto;
-    margin-top: 40px;
-    z-index: 1;
-}
-
-.btn_download::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: -15px;
-	width: 191px;
-	height: 41px;
-	background-image: url(imgs/btn_download.png);
-	z-index: -1;
 }
 
 
@@ -942,6 +907,11 @@ body {
 	.icons_markets_list li:nth-child(6) {
 		margin-left: 10px;
 	}
+
+	.btn_download {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 
@@ -1127,11 +1097,7 @@ body {
    		width: 670px;
    		line-height: 1.3;
    	}
-   	
-   	#download_section {
-   		background: url(imgs/downloads_bg_m.png);
-   		background-position-y: -74px;
-   	}
+   
 
    	#download_section .secondary_description {
    		width: 680px;
@@ -1238,10 +1204,10 @@ body {
 	    height: 550px;
 	}
 
-	.btn_download {
+	/*.btn_download {
 		margin-left: 0;
 		margin-right: 0;
-	}
+	}*/
 
 	.faq_list_item:nth-child(2),
    	.faq_list_item:nth-child(4),
@@ -1305,6 +1271,7 @@ body {
 
    	.wrapper_desktop_nav .social_btns {
    		flex-grow: 3;
+   		z-index: 1;
    	}
 
    	.desktop_nav_list {
@@ -1348,34 +1315,39 @@ body {
 	}
 
 	.btn_login {
+		box-sizing: border-box;
 	    display: block;
+	    padding-top: 9px;
+	    text-align: center;
+	    background: linear-gradient(20deg, #2f0092, #7dc7f4);
+	    width: 115px;
+	    height: 45px;
+	    margin-right: 34px;
+	    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
 	    font-family: 'Work Sans', sans-serif;
 	    font-size: 16px;
 	    font-weight: 700;
 	    color: #fff;
-	    position: relative;
-	    top: 0;
-	    left: 0;
-	    padding: 7px;
-    	padding-left: 27px;
-	    z-index: 1;
-	    margin-right: 45px;
-	}
-
-	.btn_login::before {
-	    content: '';
-	    width: 104px;
-	    height: 41px;
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    background: url(imgs/btn_login.png);
-	    z-index: -1;
 	}
 
 	#about_section {
 		background: url('imgs/about_section_bg.png');
 	}
+}
+
+@media only screen and (min-width: 1599px) {
+	.btn_login {
+		margin-left: -246px;
+	}	
+
+}
+
+@media only screen and (min-width: 1920px) {
+	.btn_login {
+		margin-left: 62px;
+	}	
+
+}
 
 
 
