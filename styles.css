@@ -20,8 +20,10 @@ body {
 }
 
 .wrapper {
-	padding-left: 10px;
-	padding-right: 10px;
+	width: 94%;
+	max-width: 1560px;
+	margin: auto;
+	box-sizing: border-box;
 }
 
 /* Langs control (MOBILE version) ------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -221,6 +223,8 @@ body {
 
 .wrapper_features {
 	background-color: #2f0092;
+	padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .feature_item_heading {
@@ -243,8 +247,6 @@ body {
 	display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding-top: 30px;
-    padding-bottom: 30px;
 
 }
 
@@ -253,11 +255,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 23px;
+    margin-top: 30px;
+    width: 30%;
 }
 
-.features_list li:nth-child(5), .features_list li:last-child {
-	margin-bottom: 0;
+.features_list li:first-child, 
+.features_list li:nth-child(2) {
+	margin-top: 0;
 }
 
 /* Hero END --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -310,7 +314,7 @@ body {
     text-align: center;
     filter: drop-shadow(0px 0px 10px rgba(243, 226, 247, 0.9));
     background: #fff;
-    height: 205px;
+    height: 197px;
     position: relative;
     top: 0;
     left: 0;
@@ -407,9 +411,9 @@ body {
 
 .icons_about_list_text {
 	position: absolute;
-    top: 70px;
-    left: -45px;
-    transform: translate(50%, 50%);
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 230px;
 }
 
@@ -491,6 +495,10 @@ body {
 	flex-wrap: wrap;	
 }
 
+.benefits_col:nth-child(2) {
+	margin-top: 50px;
+}
+
 .benefits_list {
 	margin-top: 15px;
 }
@@ -507,14 +515,10 @@ body {
 	border-radius: 5px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	/*width: 80%;*/
 } 
 
-.benefits_right_col {
-	margin-top: 50px;
-}
-
-.benefits_left_col .benefits_list li:last-child,
-.benefits_right_col .benefits_list li:last-child {
+.benefits_list li:last-child {
 	margin-bottom: 0;
 }
 
@@ -928,14 +932,14 @@ body {
 
 
 /* Media Queries ---------------------------------------------------------------------------------------------------------------------------------  */
+@media only screen and (min-width: 479px) {
+	.features_list li:nth-child(3) {
+		margin-top: 0;
+	}
+}
+
 
 @media only screen and (min-width: 599px) {
-
-
-	.wrapper{
-		padding-left: 20px;
-		padding-right: 20px;
-	}
 
 	.mobile_nav_cta .social_icons_list {
 		display: none;
@@ -980,18 +984,12 @@ body {
     .wrapper_hero_text {
     	width: 350px;
     }
-
-    .features_list {
-    	width: 500px;
-    	margin: auto;
-    }
 }
 
 @media only screen and (min-width: 959px) {
 
 	.wrapper {
-		padding-left: 65px;
-		padding-right: 65px;
+		width: 83%;
 	}
 	
 	.hero_heading {
@@ -1014,6 +1012,10 @@ body {
 	#benefits_section .wrapper_text {
 		width: 550px;
 	}
+
+	.benefits_col {
+		width: 48%;
+	}	
 
 	.feature_item_heading {
 		font-size: 18px;
@@ -1080,30 +1082,11 @@ body {
 		width: 500px;
 	}
 
-	.features_list {
-    	width: 630px;
-    }
-
     #hero_section {
   	  background-position: 48% 0%;
   	}
 
-  	.features_list li {
-  		width: 30%;
-  	}
-
-  	.features_list li:nth-child(4) {
-		margin-bottom: 0;
-  
-	}
-
-	.features_list li:first-child,
-	.features_list li:nth-child(2),
-	.features_list li:nth-child(3) {
-		margin-bottom: 40px;
-	}
-
-	.benefits_right_col {
+	.benefits_col:nth-child(2) {
 		margin-top: 0;
 	}
 
@@ -1117,7 +1100,7 @@ body {
 	}
 
 	#benefits_section {
-    	background-position: 75% 0%;
+	    background-position: 75% 0%;
     }
 
     .icons_markets_list li {
@@ -1215,10 +1198,6 @@ body {
 
 
 @media only screen and (min-width: 1279px) {
-	
-	/*.mobile_nav {
-		display: none;
-	}*/
 
 	.wrapper_hero_text {
 	    padding-top: 150px;
@@ -1227,20 +1206,19 @@ body {
 	.hero_description {
 		width: 100%;
 	}
-
-	.features_list, 
-	.features_list li,
-	#markets_section .wrapper_text {
+ 
+	.features_list li {
     	width: unset;
 	}
 
-	.features_list li:first-child, .features_list li:nth-child(2), .features_list li:nth-child(3) {
-    	margin-bottom: 0;
-	}
+	.features_list li:nth-child(4),
+	.features_list li:nth-child(5),
+	.features_list li:nth-child(6) {
+		margin-top: 0;
+	} 
 
-	.icons_about_list,
-	.icons_markets_list {
-    	justify-content: space-between;
+	#markets_section .wrapper_text {
+    	width: unset;
 	}
 
 
