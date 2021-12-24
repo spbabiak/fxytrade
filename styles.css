@@ -589,17 +589,17 @@ body {
 .icons_markets_list {
 	display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .icons_markets_list li {
-    max-width: 230px;
+    max-width: 240px;
     width: 48%;
     box-shadow: 0px 0px 10px 1px rgb(243 226 247 / 90%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    margin-bottom: 10px; 
     padding-left: 9px;
     padding-right: 9px;
     padding-top: 20px;
@@ -610,7 +610,7 @@ body {
 .icons_markets_list li:nth-child(2),
 .icons_markets_list li:nth-child(4),
 .icons_markets_list li:nth-child(6) {
-	margin-right: 0;
+	margin-left: 10px;
 }
 
 
@@ -936,6 +936,12 @@ body {
 	.features_list li:nth-child(3) {
 		margin-top: 0;
 	}
+
+	.icons_markets_list li:nth-child(2),
+	.icons_markets_list li:nth-child(4),
+	.icons_markets_list li:nth-child(6) {
+		margin-left: 10px;
+	}
 }
 
 
@@ -984,6 +990,12 @@ body {
     .wrapper_hero_text {
     	width: 350px;
     }
+
+    .icons_markets_list li:nth-child(2),
+	.icons_markets_list li:nth-child(4),
+	.icons_markets_list li:nth-child(6) {
+		margin-left: 0;
+	}
 }
 
 @media only screen and (min-width: 959px) {
@@ -1104,24 +1116,11 @@ body {
     }
 
     .icons_markets_list li {
-	    max-width: 240px;
-	    margin-bottom: 24px;
-	    margin-left: 24px;
+	    margin-bottom: 25px;
 	    padding-left: 18px;
 	    padding-right: 18px;
 	    padding-top: 30px;
 	    padding-bottom: 30px;
-   }
-
-   .icons_markets_list li:first-child,
-   .icons_markets_list li:nth-child(4) {
-   		margin-left: 0;
-   }
-
-   .icons_markets_list li:nth-child(4),
-   .icons_markets_list li:nth-child(5),
-   .icons_markets_list li:nth-child(6), {
-   		margin-bottom: 0;
    }
 
    #markets_section .wrapper_text {
@@ -1224,6 +1223,14 @@ body {
 
 	#benefits_section .wrapper_text {
     	width: 55%;
+	}
+
+	.icons_markets_list {
+		justify-content: space-between;
+	}
+
+	.icons_markets_list li {
+		width: 15%;
 	}
 
 	#download_section {
