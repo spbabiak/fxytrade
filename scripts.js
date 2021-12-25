@@ -1,25 +1,31 @@
 const navBtn = document.querySelector('.nav_btn');
 const mobileNav = document.querySelector('.mobile_nav');
-const faqListItem = document.querySelector('.faq_list_item');
-const answerItem = document.querySelector('.wrapper_answer');
+const faqListItem = document.getElementsByClassName('faq_list_item');
+const FAQListItemArray = Array.from(faqListItem);
 
 navBtn.addEventListener('click', event => {
 	if(getComputedStyle(mobileNav).display == 'none') {
 		mobileNav.style.display = 'block';
-		navBtn.style.background = 'url("imgs/icon_hamburger_menu_active.png")';
 	} else {
-		navBtn.style.background = 'url("imgs/icon_hamburger_menu.png")';
 		mobileNav.style.display = 'none';
 	}
 });	
 
-faqListItem.addEventListener('click', event => {
-	console.log(this.event);
-		if(getComputedStyle(answerItem).display == 'none') {
-		answerItem.style.display = 'block';
-		faqListItem.style.background = 'linear-gradient(to right top, #f79024, #ef2152)';
-	} else {
-		faqListItem.style.background = 'linear-gradient(to right top, #2f0092, #6a24ff)';
-		answerItem.style.display = 'none';
-	}
+FAQListItemArray.forEach(item => { 
+	item.addEventListener('click', event => {
+		const question = item.querySelector('.question');
+		const answerItem = item.querySelector('.wrapper_answer');
+		const arrowFAQ = item.querySelector('.icon_faq_arrow');
+		if(item.classList[1] == 'active') {
+			item.classList.remove('active');
+			question.style.background = 'linear-gradient(to right top, #2f0092, #535bbf)';
+			answerItem.style.display = 'none';
+			arrowFAQ.style.setProperty('--transform', 'unset');
+		} else {
+			item.classList.add('active');
+			question.style.background = 'linear-gradient(to right top, #f79024, #ef2152)';
+			answerItem.style.display = 'block';
+			arrowFAQ.style.setProperty('--transform', 'rotate(180deg)');
+		}		
+	});
 });	
