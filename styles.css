@@ -737,6 +737,7 @@ body {
     padding-top: 10px;
     background: linear-gradient(-7deg, #2f0092, #535bbf);
     border-radius: 0px 15px 15px 15px;
+    z-index: 1;
 }
 
 .question::before {
@@ -759,12 +760,17 @@ body {
 	top: 15px;
     right: 10px;
     transform: var(--transform);
+    z-index: 2;
 }
 
 .wrapper_answer {
 	display: none;
+	position: relative;
+	top: -12px;
+	left: 0;
 	background-color: #fff;
 	padding: 15px;
+	padding-top: 27px;
 	padding-bottom: 20px;
 	border-radius: 0px 0px 5px 5px;
 }
@@ -784,7 +790,7 @@ body {
 	left: 0;
     padding-top: 16px;
     text-align: center;
-    background: #fff;
+    background: #faf9fa;
     width: 190px;
     height: 48px;
     margin: auto;
