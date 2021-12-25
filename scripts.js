@@ -49,6 +49,7 @@ btnShowMore.addEventListener('click', event => {
 				// clickCounter = 0;
 			}
 		}
+	
 	} else {
 
 		itemNum = FAQListItemsArray.length - 1;
@@ -60,9 +61,5 @@ btnShowMore.addEventListener('click', event => {
 		}
 		btnShowMore.text = "Show more";
 		clickCounter = 0;
-	}
-
-	// if(itemNum > FAQListItemsArray.length) {
-		
-	// } 	
+	} 	
 });

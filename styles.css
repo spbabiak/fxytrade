@@ -146,7 +146,7 @@ body {
 	background-image: url('imgs/icon_hamburger_menu.png');
 }
 
-.nav_btn:hover {
+.nav_btn:active {
 	cursor: pointer;
 	width: 43px;
 	height: 40px;
