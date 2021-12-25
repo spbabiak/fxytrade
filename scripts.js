@@ -1,7 +1,8 @@
 const navBtn = document.querySelector('.nav_btn');
 const mobileNav = document.querySelector('.mobile_nav');
 const faqListItem = document.getElementsByClassName('faq_list_item');
-const FAQListItemArray = Array.from(faqListItem);
+const FAQListItemsArray = Array.from(faqListItem);
+const btnShowMore = document.querySelector('.btn_show_more');
 
 navBtn.addEventListener('click', event => {
 	if(getComputedStyle(mobileNav).display == 'none') {
@@ -11,7 +12,7 @@ navBtn.addEventListener('click', event => {
 	}
 });	
 
-FAQListItemArray.forEach(item => { 
+FAQListItemsArray.forEach(item => { 
 	item.addEventListener('click', event => {
 		const question = item.querySelector('.question');
 		const answerItem = item.querySelector('.wrapper_answer');
@@ -29,3 +30,39 @@ FAQListItemArray.forEach(item => {
 		}		
 	});
 });	
+
+let clickCounter = 0;
+btnShowMore.addEventListener('click', event => {
+	++clickCounter;
+	const itemsPerClick = 4;
+
+	let itemNum = itemsPerClick * clickCounter;
+	let stopPoint = itemNum + itemsPerClick;
+
+	if(itemNum < FAQListItemsArray.length) {
+		
+		for(let i = itemNum; i < stopPoint; i++) {
+			if(i < FAQListItemsArray.length) {
+				FAQListItemsArray[i].style.display = 'block';
+			} else {
+				btnShowMore.text = "Show less";	
+				// clickCounter = 0;
+			}
+		}
+	} else {
+
+		itemNum = FAQListItemsArray.length - 1;
+		stopPoint = itemNum - itemsPerClick * clickCounter;
+		for(let i = itemNum; i > stopPoint; i--) {
+			if(i >= itemsPerClick) {
+				FAQListItemsArray[i].style.display = 'none';
+			} 
+		}
+		btnShowMore.text = "Show more";
+		clickCounter = 0;
+	}
+
+	// if(itemNum > FAQListItemsArray.length) {
+		
+	// } 	
+});
