@@ -821,7 +821,7 @@ body {
     left: 2px;
     width: 186px;
     height: 48px;
-    background: #fff;
+    background: #faf9fa;
     clip-path: polygon(8% 50%, 92% 50%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
     z-index: -1;
 }
