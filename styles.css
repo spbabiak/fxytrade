@@ -143,7 +143,7 @@ body {
 .nav_btn {
 	width: 43px;
 	height: 40px;
-	background-image: var(--nav_btn_color);
+	background-image: url('imgs/icon_hamburger_menu.png');
 }
 
 .nav_btn:hover {
