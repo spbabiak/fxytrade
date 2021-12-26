@@ -34,6 +34,10 @@ body {
 }
 
 .langs {
+	position: absolute;
+	top: 0;
+    right: -32px;
+    z-index: 1;
 	cursor: pointer;
 }
 
@@ -42,7 +46,7 @@ body {
     height: 16px;
     position: absolute;
     top: 2px;
-    right: -37px;
+    right: -39px;
     background-color: #fff;
     border-radius: 50%;
     z-index: 4;
@@ -62,25 +66,30 @@ body {
 .langs li {
     width: 29px;
     height: 21px;
-    position: absolute;
- 	top: 0;
-    right: -30px;
+    margin-bottom: 5px;
+    position: relative;
+    top: 0;
+    right: 0;
 }
 
-.langs li:first-child {
-    background: center / contain no-repeat url(imgs/english.png);
-    z-index: 3;
+.ENG {
+	background: center / contain no-repeat url(imgs/english.png);	
 }
 
-.langs li:nth-child(2) {
-    background: center / contain no-repeat url(imgs/german.png);
-    z-index: 2;
+.DE {
+	background: center / contain no-repeat url(imgs/german.png);	
 }
 
-.langs li:last-child {
-    background: center / contain no-repeat url(imgs/italy.png);
-    z-index: 1;
+.IT {
+	background: center / contain no-repeat url(imgs/italy.png);
 }
+
+
+.langs li:nth-child(2),
+.langs li:nth-child(3) {
+	display: none;    
+}
+
 
 /* Langs control END --------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -849,15 +858,23 @@ body {
 	border-bottom: 1px solid #402ca8;
 }
 
+.wrapper_footer_nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrapper_footer_nav .left {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .footer_nav {
 	display: flex;
 	flex-direction: column;
-	justify-content: start;
 }
 
 .footer_nav_item {
 	color: #fff;
-	margin-top: 5px;
 }
 
 .footer_bottom .social_btns {
@@ -915,12 +932,9 @@ body {
 .payments_icons_list {
 	display: flex;
     flex-wrap: wrap;
-    width: 45%;
     justify-content: space-evenly;
     max-width: 270px;
-    position: absolute;
-    right: 0;
-    top: 0;
+    width: 100%;
 }
 
 .payments_icons_list li {
@@ -951,6 +965,10 @@ body {
 	.btn_download {
 		margin-left: 0;
 		margin-right: 0;
+	}
+
+	.wrapper_footer_nav .logo {
+		margin-right: 20px;
 	}
 }
 
@@ -1159,13 +1177,12 @@ body {
 		display: none;
 	}
 
-   	.footer_nav {
-	    display: flex;
-	    flex-direction: row;
+	.wrapper_footer_nav .logo {
+     	margin-right: 0; 
 	}
 
-	.wrapper_footer_nav {
-		display: flex;
+   .footer_nav {
+		flex-direction: row;
 	}
 
 	.footer_nav_item:first-child {
@@ -1192,7 +1209,6 @@ body {
 	.disclaimer {
 		display: flex;
 		justify-content: space-between;
-
 	}
 
 
@@ -1256,7 +1272,7 @@ body {
    		display: none;
    	}
 
-   	.icon_english {
+   	/*.icon_english {
    		display: block;
 		width: 29px;
 		height: 21px;
@@ -1275,7 +1291,7 @@ body {
    		width: 29px;
 		height: 21px;
 		background: center / contain no-repeat url(imgs/italy.png);
-   	}
+   	}*/
 
    	.wrapper_desktop_nav {
    		display: flex;
@@ -1329,20 +1345,22 @@ body {
 		flex-grow: 0;
 	}
 
-	.langs_list {
+	.langs_row {
 		display: flex;
 	}
 
-	.langs_list li {
+	.langs_row li {
+		width: 29px;
+		height: 21px;
 		margin-right: 6px;
 		opacity: .3;
 	}
 
-	.langs_list li:last-child {
+	.langs_row li:last-child {
 		margin-right: 0;
 	}
 
-	.langs_list .lang_active {
+	.langs_row .active {
 		opacity: 1;
 	}
 

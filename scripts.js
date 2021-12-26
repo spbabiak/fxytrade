@@ -3,6 +3,12 @@ const mobileNav = document.querySelector('.mobile_nav');
 const faqListItem = document.getElementsByClassName('faq_list_item');
 const FAQListItemsArray = Array.from(faqListItem);
 const btnShowMore = document.querySelector('.btn_show_more');
+const langs = document.querySelector('.langs');
+const langsItems = langs.getElementsByTagName('li');
+const langsItemsArray = Array.from(langsItems);
+const langsRow = document.querySelector('.langs_row');
+const langsRowItems = langsRow.getElementsByTagName('li');
+const langsRowItemsArray = Array.from(langsRowItems);
 
 navBtn.addEventListener('click', event => {
 	if(getComputedStyle(mobileNav).display == 'none') {
@@ -62,4 +68,51 @@ btnShowMore.addEventListener('click', event => {
 		btnShowMore.text = "Show more";
 		clickCounter = 0;
 	} 	
+});
+
+langs.addEventListener('click', event => {
+	
+	for(let i = 1; i < langsItemsArray.length; i++) {
+
+		if((langsItemsArray[i].style.display === '') || (langsItemsArray[i].style.display === 'none')) {
+			langsItemsArray[i].style.display = 'block';
+		}else {
+			langsItemsArray[i].style.display = 'none';
+		}
+	}
+});
+
+
+// Langs switcher (mobile)
+
+langsItemsArray.forEach(item => {
+	if(item.classList[1] != 'active') {
+		item.addEventListener('click', event => {
+			langsItemsArray[0].classList.toggle('active');
+			item.classList.add(langsItemsArray[0].classList[0]);
+			langsItemsArray[0].classList.add(item.classList[0]);
+			langsItemsArray[0].classList.remove(langsItemsArray[0].classList[0]);
+			item.classList.remove(item.classList[0]);
+			langsItemsArray[0].classList.toggle('active');
+		});	
+	}
+	
+});
+
+// Langs switcher wide screens
+// langsRow.addEventListener('click', event => {
+
+	
+// });
+langsRowItemsArray.forEach(item => {
+
+	item.addEventListener('click', event => {
+		if(item.classList[1] !== 'active') {
+			for(let i = 0; i < langsRowItemsArray.length; i++) {
+				langsRowItemsArray[i].classList.remove('active');
+			} 
+		
+			item.classList.add('active');
+		}	
+	});
 });
