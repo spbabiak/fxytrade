@@ -1363,6 +1363,7 @@ body {
 
 	#about_section {
 		background: url('imgs/about_section_bg.png');
+		background-size: cover;
 	}
 
 	.faq_list_item {
