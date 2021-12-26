@@ -306,7 +306,7 @@ body {
 	margin-top: 15px;
 }
 
-.wrapper_more_content {
+.wrapper_main_content {
 	margin-top: 50px;
 }
 
@@ -457,7 +457,7 @@ body {
     width: 80%;
 }
 
-#benefits_section .wrapper_more_content {
+#benefits_section .wrapper_main_content {
 	max-width: 953px;
 }
 
@@ -498,7 +498,7 @@ body {
 	background: no-repeat url('imgs/icon_6.png');
 }
 
-#benefits_section .wrapper_more_content {
+#benefits_section .wrapper_main_content {
 	display: flex;
 	flex-wrap: wrap;	
 }
@@ -654,6 +654,10 @@ body {
     color: #2f0092;
 }
 
+.btn_register:hover {
+	background: linear-gradient(to right, #ef2152, #f79024);	
+	color: white;
+}
 /* CTA END --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Download  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -691,6 +695,10 @@ body {
     font-size: 16px;
     font-weight: 700;
     color: #fff;
+}
+
+.btn_download:hover {
+	background: linear-gradient(to right, #ef2152, #f79024);	
 }
 
 
@@ -1026,7 +1034,7 @@ body {
 	}
 }
 
-@media only screen and (min-width: 959px) {
+@media only screen and (min-width: 960px) {
 
 	.wrapper {
 		width: 83%;
@@ -1135,7 +1143,7 @@ body {
 
 	}
 
-	#benefits_section .wrapper_more_content {
+	#benefits_section .wrapper_main_content {
 	    justify-content: space-between;
 	}
 
@@ -1222,7 +1230,7 @@ body {
 }
 
 
-@media only screen and (min-width: 1279px) {
+@media only screen and (min-width: 1280px) {
 
 	.wrapper_hero_text {
 	    padding-top: 150px;
@@ -1272,64 +1280,33 @@ body {
    		display: none;
    	}
 
-   	/*.icon_english {
-   		display: block;
-		width: 29px;
-		height: 21px;
-   		background: center / contain no-repeat url(imgs/english.png);
-	}
-
-   	.icon_german {
-   		display: block;
-   		width: 29px;
-		height: 21px;
-	    background: center / contain no-repeat url(imgs/german.png);		
-   	}
-
-   	.icon_italian {
-   		display: block;
-   		width: 29px;
-		height: 21px;
-		background: center / contain no-repeat url(imgs/italy.png);
-   	}*/
-
    	.wrapper_desktop_nav {
    		display: flex;
    		align-items: center;
    		justify-content: space-between;
-   		background: transparent;
    		padding-top: 23px;
-    	padding-bottom: 23px;
+   		padding-bottom: 23px;
    	}
 
-   	.foo {
-	    width: 920px;
-	    height: 92px;
+   	.bar {
+	    width: 100%;
+	    border-top: 92px solid #fff;
 	    position: absolute;
 	    top: 0;
 	    left: 0;
-	    border-right: 57px solid transparent;
-	    border-top: 92px solid #fff;
-	    display: block;
-   	}
-
-   	.wrapper_desktop_nav .logo {
-   		flex-grow: 1;
    	}
 
    	.wrapper_desktop_nav .social_btns {
-   		flex-grow: 3;
    		z-index: 1;
    	}
 
    	.desktop_nav_list {
    		display: flex;
-   		flex-grow: 1;
    		z-index: 1;
 	}
 
 	.desktop_nav_item {
-		margin-left: 45px;
+		margin-right: 45px;
 		font-size: 18px;
 		font-weight: 400;
 		color: #2f0092;
@@ -1342,11 +1319,11 @@ body {
 	.desktop_cta {
 		display: flex;
 		align-items: center;
-		flex-grow: 0;
 	}
 
 	.langs_row {
 		display: flex;
+		z-index: 1;
 	}
 
 	.langs_row li {
@@ -1380,6 +1357,10 @@ body {
 	    color: #fff;
 	}
 
+	.btn_login:hover {
+		background: linear-gradient(to right, #ef2152, #f79024);	
+	}
+
 	#about_section {
 		background: url('imgs/about_section_bg.png');
 	}
@@ -1393,17 +1374,35 @@ body {
 	}
 }
 
-@media only screen and (min-width: 1599px) {
-	.btn_login {
-		margin-left: -246px;
+@media only screen and (min-width: 1530px) {
+	.icons_about_list li {
+		width: 24%;
 	}	
+}
 
+@media only screen and (min-width: 1600px) {
+	.bar {
+	    width: 920px;
+	    border-right: 57px solid transparent;
+   	}	
 }
 
 @media only screen and (min-width: 1920px) {
-	.btn_login {
-		margin-left: 62px;
-	}	
+	.wrapper_desktop_nav .logo {
+   		flex-grow: 1;
+   	}
+
+   	.desktop_nav_list li:last-child {
+   		margin-right: 70px;
+   	}
+
+   	.desktop_nav_list li:last-child .desktop_nav_item {
+		margin-right: 0;
+	}
+
+   	.social_btns {
+   		flex-grow: 2;	
+   	}
 
 }
 
