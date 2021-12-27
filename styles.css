@@ -198,14 +198,17 @@ body {
 
 #hero_section {
 	min-height: 646px;
-	background-image: url('imgs/slide_1.png');
-	background-position: 60% 0%;
 	position: relative;
 	top: 0;
 	left: 0;
 }
 
-.wrapper_hero_text {
+.main_hero_section {
+	background-image: url('imgs/slide_1.png');
+	background-position: 60% 0%;
+}
+
+.main_hero_section .wrapper_hero_text {
 	width: 276px;
 	padding-top: 50px;
 }
@@ -958,7 +961,81 @@ body {
 
 
 
+
+/* Products page  -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.products_hero_section {
+	background-image: url('imgs/about_hero_bg_s.png');
+	background-repeat: no-repeat;
+}
+
+.products_hero_section .wrapper_hero_text {
+	padding-top: 50px;	
+}
+
+.products_hero_section .secondary_heading,
+.products_hero_section .secondary_description {
+	color: #fff;
+}
+
+.products_hero_section .secondary_description {
+	margin-top: 50px;
+}
+
+.btn_apps_list {
+	width: 100%;
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	max-width: 396px;
+}
+
+.btn_apps_list li {
+	height: 40px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.btn_google_play {
+	display: block;
+	width: 135px;
+	height: 40px;
+	background: no-repeat url(imgs/google_play_badge.png);
+}
+
+.btn_app_store {
+	display: block;
+	width: 120px;
+	height: 40px;
+	background: no-repeat url(imgs/app_store_badge.png);
+}
+
+.btn_ms_store {
+	display: block;
+	width: 111px;
+	height: 40px;
+	background: no-repeat url(imgs/ms_store_badge.png);
+}
+
+/* Products page END  -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
 /* Media Queries ---------------------------------------------------------------------------------------------------------------------------------  */
+@media only screen and (min-width: 321px) {
+	.products_hero_section {
+		background-image: url('imgs/about_hero_bg_m.png');
+	}
+}
+
 @media only screen and (min-width: 479px) {
 	.features_list li:nth-child(3) {
 		margin-top: 0;
@@ -1023,7 +1100,7 @@ body {
     	font-size: 50px;
     }
 
-    .wrapper_hero_text {
+    .main_hero_section .wrapper_hero_text {
     	width: 350px;
     }
 
@@ -1122,7 +1199,7 @@ body {
 		font-size: 14px;
 	}
 
-	.wrapper_hero_text {
+	.main_hero_section .wrapper_hero_text {
 		width: 610px;
 	}
 
@@ -1226,6 +1303,14 @@ body {
 
 	.footer_bottom {
 		padding-top: 20px;
+	}
+
+}
+
+
+@media screen and (min-width: 961px) {
+	.products_hero_section {
+		background-image: url('imgs/about_hero_bg_l.png');
 	}
 }
 
@@ -1331,6 +1416,7 @@ body {
 		height: 21px;
 		margin-right: 6px;
 		opacity: .3;
+		cursor: pointer;
 	}
 
 	.langs_row li:last-child {
@@ -1373,12 +1459,26 @@ body {
 	.question {
 		font-size: 16px;
 	}
+
+	.products_hero_section .wrapper_hero_text {
+   		width: 800px;
+   		padding-top: 150px;
+   	}
 }
 
 @media only screen and (min-width: 1530px) {
 	.icons_about_list li {
 		width: 24%;
 	}	
+
+	#about_section .secondary_description,
+	#markets_section .secondary_description {
+		width: 1250px;
+	}
+
+	#benefits_section .wrapper_text {
+    	width: 67%;
+	}
 }
 
 @media only screen and (min-width: 1600px) {

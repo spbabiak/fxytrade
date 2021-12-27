@@ -38,37 +38,39 @@ FAQListItemsArray.forEach(item => {
 });	
 
 let clickCounter = 0;
-btnShowMore.addEventListener('click', event => {
-	++clickCounter;
-	const itemsPerClick = 4;
+if(btnShowMore) {
+	btnShowMore.addEventListener('click', event => {
+		++clickCounter;
+		const itemsPerClick = 4;
 
-	let itemNum = itemsPerClick * clickCounter;
-	let stopPoint = itemNum + itemsPerClick;
+		let itemNum = itemsPerClick * clickCounter;
+		let stopPoint = itemNum + itemsPerClick;
 
-	if(itemNum < FAQListItemsArray.length) {
-		
-		for(let i = itemNum; i < stopPoint; i++) {
-			if(i < FAQListItemsArray.length) {
-				FAQListItemsArray[i].style.display = 'block';
-			} else {
-				btnShowMore.text = "Show less";	
-				// clickCounter = 0;
+		if(itemNum < FAQListItemsArray.length) {
+			
+			for(let i = itemNum; i < stopPoint; i++) {
+				if(i < FAQListItemsArray.length) {
+					FAQListItemsArray[i].style.display = 'block';
+				} else {
+					btnShowMore.text = "Show less";	
+					// clickCounter = 0;
+				}
 			}
-		}
-	
-	} else {
+		
+		} else {
 
-		itemNum = FAQListItemsArray.length - 1;
-		stopPoint = itemNum - itemsPerClick * clickCounter;
-		for(let i = itemNum; i > stopPoint; i--) {
-			if(i >= itemsPerClick) {
-				FAQListItemsArray[i].style.display = 'none';
-			} 
-		}
-		btnShowMore.text = "Show more";
-		clickCounter = 0;
-	} 	
-});
+			itemNum = FAQListItemsArray.length - 1;
+			stopPoint = itemNum - itemsPerClick * clickCounter;
+			for(let i = itemNum; i > stopPoint; i--) {
+				if(i >= itemsPerClick) {
+					FAQListItemsArray[i].style.display = 'none';
+				} 
+			}
+			btnShowMore.text = "Show more";
+			clickCounter = 0;
+		} 	
+	});
+}
 
 langs.addEventListener('click', event => {
 	
