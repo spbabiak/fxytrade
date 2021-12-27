@@ -36,8 +36,8 @@ body {
 .langs {
 	position: absolute;
 	top: 0;
-    right: -32px;
-    z-index: 1;
+    right: -40px;
+    z-index: 2;
 	cursor: pointer;
 }
 
@@ -46,7 +46,7 @@ body {
     height: 16px;
     position: absolute;
     top: 2px;
-    right: -39px;
+    right: -48px;
     background-color: #fff;
     border-radius: 50%;
     z-index: 4;
@@ -578,7 +578,8 @@ body {
 	background: center no-repeat url('imgs/icon_shares.png');
 }
 
-.icons_markets_list .icon_heading {
+.icons_markets_list .icon_heading,
+.icons_features_list .icon_heading {
 	font-family: 'Work Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 700;
@@ -967,7 +968,7 @@ body {
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .products_hero_section {
-	background-image: url('imgs/about_hero_bg_s.png');
+	background-image: url('imgs/products_hero_bg_s.png');
 	background-repeat: no-repeat;
 }
 
@@ -1020,6 +1021,119 @@ body {
 	background: no-repeat url(imgs/ms_store_badge.png);
 }
 
+#features_section {
+	background-color: #faf9fa;
+}
+
+.icon_ux {
+	width: 50px;
+	height: 49px;
+	background: center no-repeat url('imgs/icon_ux.png');
+}
+
+.icon_flexibility,
+.icon_security,
+.icon_advisors,
+.icon_communication,
+.icon_ux,
+.icon_resources {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 126px;
+	height: 126px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 1px rgb(243 226 247 / 90%);
+}
+
+.icon_flexibility::before,
+.icon_security::before,
+.icon_advisors::before,
+.icon_communication::before,
+.icon_ux::before,
+.icon_resources::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	
+}
+
+.icon_flexibility::before {
+	width: 60px;
+	height: 50px;
+	background: center no-repeat url('imgs/icon_flexibility.png');
+}
+
+.icon_security::before {
+	width: 62px;
+	height: 50px;
+	background: center no-repeat url('imgs/icon_security.png');
+}
+
+.icon_advisors::before {
+	width: 60px;
+	height: 53px;
+	background: center no-repeat url('imgs/icon_advisors.png');
+}
+
+.icon_communication::before {
+	width: 64px;
+	height: 51px;
+	background: center no-repeat url('imgs/icon_communication.png');
+}
+
+.icon_ux::before {
+	width: 50px;
+	height: 49px;
+	background: center no-repeat url('imgs/icon_ux.png');
+}
+
+.icon_resources::before {
+	width: 49px;
+	height: 50px;
+	background: center no-repeat url('imgs/icon_resources.png');
+}
+
+.icons_features_list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.icons_features_list li {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 86px;
+	width: 50%;
+	text-align: center;
+}
+
+.icons_features_list li:nth-child(5),
+.icons_features_list li:last-child {
+	margin-bottom: 0;
+}
+
+.wrapper_icons_features_text {
+	width: 86%;
+	max-width: 275px;
+}
+
+.wrapper_icons_features_text span {
+	display: block;
+}
+
+.icons_features_list .icon_heading {
+	font-size: 14px;
+}
+
+.icons_features_list .icon_text {
+	font-size: 12px;
+	margin-top: 10px;
+}
+
 /* Products page END  -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -1032,7 +1146,7 @@ body {
 /* Media Queries ---------------------------------------------------------------------------------------------------------------------------------  */
 @media only screen and (min-width: 321px) {
 	.products_hero_section {
-		background-image: url('imgs/about_hero_bg_m.png');
+		background-image: url('imgs/products_hero_bg_m.png');
 	}
 }
 
@@ -1055,6 +1169,30 @@ body {
 	.wrapper_footer_nav .logo {
 		margin-right: 20px;
 	}
+
+	.icons_features_list li {
+		width: unset;
+		flex-direction: unset;
+		text-align: unset;
+	}
+
+	.icon_flexibility,
+	.icon_security,
+	.icon_advisors,
+	.icon_communication,
+	.icon_ux,
+	.icon_resources {
+		margin-right: 30px;
+	}
+
+	.icons_features_list .icon_heading {
+		margin-top: 0;
+	}
+
+	.icons_features_list li:nth-child(5) {
+		margin-bottom: 86px;
+	}
+
 }
 
 
@@ -1109,6 +1247,20 @@ body {
 	.icons_markets_list li:nth-child(6) {
 		margin-left: 0;
 	}
+}
+
+@media only screen and (min-width: 768px) {
+	.wrapper_icons_features_text {
+		width: 47%;
+	}
+
+	.icons_features_list li {
+   		width: 50%;
+   	}
+
+   	.icons_features_list li:nth-child(5) {
+   		margin-bottom: 0;
+   	}
 }
 
 @media only screen and (min-width: 960px) {
@@ -1305,12 +1457,20 @@ body {
 		padding-top: 20px;
 	}
 
+	.wrapper_icons_features_text {
+    	width: 55%;
+	}
+
+	.icons_features_list .icon_text {
+		font-size: 14px;
+	}
+
 }
 
 
 @media screen and (min-width: 961px) {
 	.products_hero_section {
-		background-image: url('imgs/about_hero_bg_l.png');
+		background-image: url('imgs/products_hero_bg_l.png');
 	}
 }
 
@@ -1464,6 +1624,14 @@ body {
    		width: 800px;
    		padding-top: 150px;
    	}
+
+   	.icons_features_list li {
+    	width: 33%;
+	}
+
+	.icons_features_list li:nth-child(4) {
+		margin-bottom: 0;
+	}
 }
 
 @media only screen and (min-width: 1530px) {
