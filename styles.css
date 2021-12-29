@@ -208,8 +208,11 @@ body {
 	background-position: 60% 0%;
 }
 
-.wrapper_hero_text {
+.main_hero_section .wrapper_hero_text {
 	width: 276px;
+}
+
+.wrapper_hero_text {
 	padding-top: 50px;
 }
 
@@ -1578,7 +1581,7 @@ body {
 		width: 500px;
 	}
 
-    #hero_section {
+    .main_hero_section {
   	  background-position: 48% 0%;
   	}
 
@@ -1872,6 +1875,10 @@ body {
 
 	.question {
 		font-size: 16px;
+	}
+
+	.products_hero_section {
+		background-position: 15% 0%;
 	}
 
 	.products_hero_section .wrapper_hero_text {
