@@ -1531,6 +1531,18 @@ body {
    	}
 }
 
+@media only screen and (min-width: 800px) {
+	.about_hero_text_content {
+		z-index: 1;
+	}
+
+	.about_hero_img_content {
+	    width: 100%;
+	    margin-top: -5px;
+	    z-index: 0;
+	}
+}
+
 @media only screen and (min-width: 960px) {
 
 	.wrapper {
