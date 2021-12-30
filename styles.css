@@ -1362,6 +1362,7 @@ body {
 .about_hero_section {
 	background: url('imgs/about_hero_bg.png');
 	background-repeat: no-repeat;
+	background-size: cover;
 	overflow: hidden;
 }
 
@@ -1382,7 +1383,7 @@ body {
 
 .about_hero_img_content {
 	width: 100%;
-	margin-top: 18px;
+	margin-top: 40px;
 }
 
 .img_globe {
@@ -1529,18 +1530,6 @@ body {
    	.icons_features_list li:nth-child(5) {
    		margin-bottom: 0;
    	}
-}
-
-@media only screen and (min-width: 800px) {
-	.about_hero_text_content {
-		z-index: 1;
-	}
-
-	.about_hero_img_content {
-	    width: 100%;
-	    margin-top: -5px;
-	    z-index: 0;
-	}
 }
 
 @media only screen and (min-width: 960px) {
