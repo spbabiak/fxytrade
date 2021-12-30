@@ -1355,6 +1355,55 @@ body {
 
 
 
+/* About page  -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.about_hero_section {
+	background: url('imgs/about_hero_bg.png');
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.about_hero_section .secondary_heading, 
+.about_hero_section .secondary_description {
+	color: #fff;	
+}
+
+.about_hero_section .secondary_description {
+	margin-top: 25px;
+}
+
+.about_hero_section .about_hero_text_content {
+	width: 100%;
+	max-width: 756px;
+	padding-top: 50px;
+}
+
+.about_hero_img_content {
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+    margin-top: 40px;	
+}
+
+.img_globe {
+	width: 100%;
+	max-width: 1019px;
+}
+
+.about_hero_section .wrapper_hero_text {
+	padding-top: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+
+/* About page END -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 
@@ -1483,6 +1532,10 @@ body {
    	.icons_features_list li:nth-child(5) {
    		margin-bottom: 0;
    	}
+
+   	.about_hero_img_content {
+    	margin-top: 13px;
+	}
 }
 
 @media only screen and (min-width: 960px) {
@@ -1724,6 +1777,18 @@ body {
     	width: unset;
 	}
 
+	.about_hero_section .about_hero_text_content {
+   	 	z-index: 1;
+	}
+
+	.about_hero_img_content {
+    	margin-top: -196px;
+	}
+
+	.img_globe {
+	    z-index: 0;
+	}
+
 
 @media screen and (min-width: 961px) {
 	.products_hero_section {
@@ -1937,6 +2002,22 @@ body {
 
 	.form_icons_list {
 		justify-content: space-between;
+	}
+
+	.about_hero_section .wrapper_hero_text {
+		flex-wrap: unset;
+	}
+
+	.about_hero_section .about_hero_text_content {
+	    padding-top: 100px;
+	}
+
+	.about_hero_img_content {
+    	margin-top: 0;
+	}
+
+	.img_globe {
+		width: 200%;
 	}
 }
 
