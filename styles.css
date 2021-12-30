@@ -1382,10 +1382,7 @@ body {
 
 .about_hero_img_content {
 	width: 100%;
-	position: relative;
-	top: 0;
-	left: 0;
-    margin-top: 40px;	
+	margin-top: 18px;
 }
 
 .img_globe {
@@ -1532,10 +1529,6 @@ body {
    	.icons_features_list li:nth-child(5) {
    		margin-bottom: 0;
    	}
-
-   	.about_hero_img_content {
-    	margin-top: 13px;
-	}
 }
 
 @media only screen and (min-width: 960px) {
