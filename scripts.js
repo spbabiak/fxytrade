@@ -9,7 +9,10 @@ const langsItemsArray = Array.from(langsItems);
 const langsRow = document.querySelector('.langs_row');
 const langsRowItems = langsRow.getElementsByTagName('li');
 const langsRowItemsArray = Array.from(langsRowItems);
-
+const form = document.querySelector('#main_form');
+const inputElements = form.getElementsByTagName('input');
+const inputsArray = Array.from(inputElements);
+console.log(inputsArray);
 navBtn.addEventListener('click', event => {
 	if(getComputedStyle(mobileNav).display == 'none') {
 		mobileNav.style.display = 'block';
@@ -101,11 +104,6 @@ langsItemsArray.forEach(item => {
 	
 });
 
-// Langs switcher wide screens
-// langsRow.addEventListener('click', event => {
-
-	
-// });
 langsRowItemsArray.forEach(item => {
 
 	item.addEventListener('click', event => {
@@ -118,3 +116,29 @@ langsRowItemsArray.forEach(item => {
 		}	
 	});
 });
+
+
+
+
+// inputsArray.forEach(item => {
+// 	let placeholderVal = item.getAttribute('placeholder');
+	
+// 	item.addEventListener('focus', event => {
+// 		if(placeholderVal != '') {
+// 			item.setAttribute('placeholder', '');
+			
+// 		} else {
+
+// 			item.setAttribute('placeholder', placeholderVal);
+// 		}
+	
+// 	});
+// });
+
+
+// Intl-tel-input
+
+let phone = document.querySelector('#POST-phone');
+  window.intlTelInput(phone, {
+    utilsScript: "utils.js?1638200991544"
+  });

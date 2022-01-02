@@ -14,6 +14,10 @@ body {
 	line-height: 1.5;
 }
 
+input {
+	color: #d5d2d2;
+}
+
 .foo {
 	display: none;
 }
@@ -1199,6 +1203,18 @@ body {
 	color: #fff;
 }
 
+/* Intl-tel-input */
+.iti__flag {
+	background-image: url("imgs/flags.png");
+}
+
+.iti { 
+	width: 100%;
+	max-width: 335px;
+	display: block;
+	margin: auto; 
+}
+
 .wrapper_form_content {
 	display: flex;
 	align-items: center;
@@ -1300,6 +1316,7 @@ body {
 	margin-bottom: 48px;
 }
 
+
 #main_form input {
 	box-sizing: border-box;
 	width: 100%;
@@ -1312,10 +1329,11 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	font-weight: 400;
-	color: #787186;
+	color: #000;
 	padding-bottom: 10px;
 	margin-bottom: 26px;
 }
+
 
 #main_form input:focus {
 	outline: none;
@@ -2196,6 +2214,8 @@ body {
    	.img_vision {
 		width: 100%;
 	}
+
+	.iti__flag {background-image: url("imgs/flags@2x.png");}
 
 }
 
