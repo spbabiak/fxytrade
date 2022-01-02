@@ -262,14 +262,28 @@
 					</div>	
 					<div class="wrapper_form">
 						<h2 class="form_heading">Contact with Us</h2>
-						<form id="main_form" action="" method="post">
-							<label><input id="POST-name" type="text" name="name" placeholder="Name"></label>
+						<form id="main_form" action="" method="post" novalidate>
+							<label>
+								<input id="POST-name" type="text" name="name" placeholder="Name">
+								<span class="error_name" aria-live="polite"></span>
+							</label>
 								
-							<label><input id="POST-surname" type="text" name="surname" placeholder="Surname"></label>
+							<label>
+								<input id="POST-surname" type="text" name="surname" placeholder="Surname">
+								<span class="error_surname" aria-live="polite"></span>
+							</label>
 					
-							<label><input id="POST-email" type="email" name="email" placeholder="Email"></label>
+							<label>
+								<input id="POST-email" type="email" name="email" placeholder="Email">
+								<span class="error_email" aria-live="polite"></span>
+							</label>
 						
-							<label><input id="POST-phone" type="tel" name="phone" placeholder="(201) 555-0123"></label>
+							<label>
+								<input id="POST-phone" type="tel" name="phone" placeholder="">
+								<span id="valid-msg" class="hide">✓ Valid</span>
+								<span id="error-msg" class="hide"></span>
+								<span class="error_phone" aria-live="polite"></span>
+							</label>
 						
 						 	<button class="btn_submit" type="submit">Send</button>
 							

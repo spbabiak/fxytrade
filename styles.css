@@ -1204,6 +1204,11 @@ input {
 }
 
 /* Intl-tel-input */
+
+.iti__flag-container {
+    padding-bottom: 8px;
+}
+
 .iti__flag {
 	background-image: url("imgs/flags.png");
 }
@@ -1212,8 +1217,45 @@ input {
 	width: 100%;
 	max-width: 335px;
 	display: block;
-	margin: auto; 
+	margin: auto;
 }
+
+.error_name,
+.error_surname,
+.error_email,
+.error_phone,
+#valid-msg,
+#error-msg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+}
+
+#valid-msg {
+	color: green;
+}
+
+.hide {
+	display: none;
+}
+
+.error_name {
+	top: 169px;
+}
+
+.error_surname {
+	top: 226px;
+}
+
+.error_email {
+	top: 284px;
+}
+
+.error_phone {
+	bottom: 121px;
+}
+
 
 .wrapper_form_content {
 	display: flex;
@@ -1305,6 +1347,9 @@ input {
 	padding-top: 48px;
 	padding-bottom: 55px;
 	margin-top: 50px;
+	position: relative;
+	top: 0;
+	left: 0;
 }
 
 .form_heading {
@@ -1332,12 +1377,19 @@ input {
 	color: #000;
 	padding-bottom: 10px;
 	margin-bottom: 26px;
+	position: relative;
+	top: 0;
+	left: 0;
 }
 
 
 #main_form input:focus {
 	outline: none;
 	border-bottom: 1px solid #f79024;
+}
+
+#main_form .error_input {
+	border-bottom: 1px solid red;
 }
 
 .btn_submit {
