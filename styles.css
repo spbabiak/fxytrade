@@ -1960,6 +1960,10 @@ input {
 	.products_hero_section {
 		background-image: url('imgs/products_hero_bg_l.png');
 	}
+
+	.footer .logo {
+		margin-right: 10px;
+	}
 }
 
 
@@ -2023,7 +2027,7 @@ input {
 
    	.bar {
 	    width: 100%;
-	    border-top: 92px solid #fff;
+	    border-top: 115px solid #fff;
 	    position: absolute;
 	    top: 0;
 	    left: 0;

@@ -9,9 +9,6 @@ const langsItemsArray = Array.from(langsItems);
 const langsRow = document.querySelector('.langs_row');
 const langsRowItems = langsRow.getElementsByTagName('li');
 const langsRowItemsArray = Array.from(langsRowItems);
-const form = document.querySelector('#main_form');
-const inputElements = form.getElementsByTagName('input');
-const inputsArray = Array.from(inputElements);
 
 navBtn.addEventListener('click', event => {
 	if(getComputedStyle(mobileNav).display == 'none') {
@@ -120,118 +117,125 @@ langsRowItemsArray.forEach(item => {
 
 // Intl-tel-input
 
-var errorMsg = document.querySelector("#error-msg"),
-validMsg = document.querySelector("#valid-msg");
-var phone = document.querySelector('#POST-phone');
-var iti = window.intlTelInput(phone, {
-    utilsScript: "utils.js?1638200991544",
-});
+const form = document.querySelector('#main_form');
+if(form) {
 
-// here, the index maps to the error code returned from getValidationError - see readme
-var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+	var errorMsg = document.querySelector("#error-msg"),
+	validMsg = document.querySelector("#valid-msg");
+	var phone = document.querySelector('#POST-phone');
+	var iti = window.intlTelInput(phone, {
+	    utilsScript: "utils.js?1638200991544",
+	    nationalMode: true
+	});
 
-var reset = function() {
-  phone.classList.remove("error");
-  errorMsg.innerHTML = "";
-  errorMsg.classList.add("hide");
-  validMsg.classList.add("hide");
-};
+	// here, the index maps to the error code returned from getValidationError - see readme
+	var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
 
-// on blur: validate
-phone.addEventListener('blur', function() {
-  reset();
-  if (phone.value.trim()) {
-    if (iti.isValidNumber()) {
-      validMsg.classList.remove("hide");
-    } else {
-      phone.classList.add("error_input");	
-      var errorCode = iti.getValidationError();
-      errorMsg.innerHTML = errorMap[errorCode];
-      errorMsg.classList.remove("hide");
-    }
-  }
-});
+	var reset = function() {
+	  phone.classList.remove("error");
+	  errorMsg.innerHTML = "";
+	  errorMsg.classList.add("hide");
+	  validMsg.classList.add("hide");
+	};
 
-// on keyup / change flag: reset
-phone.addEventListener('change', reset);
-phone.addEventListener('keyup', reset);
+	// on blur: validate
+	phone.addEventListener('blur', function() {
+	  reset();
+	  if (phone.value.trim()) {
+	    if (iti.isValidNumber()) {
+	      validMsg.classList.remove("hide");
+	    } else {
+	      phone.classList.add("error_input");	
+	      var errorCode = iti.getValidationError();
+	      errorMsg.innerHTML = errorMap[errorCode];
+	      errorMsg.classList.remove("hide");
+	    }
+	  }
+	});
 
-// Other form fields validation
-const errorName = document.querySelector('.error_name');
-const errorSurname = document.querySelector('.error_surname');
-const errorEmail = document.querySelector('.error_email');
-const errorPhone = document.querySelector('.error_phone');
+	// on keyup / change flag: reset
+	phone.addEventListener('change', reset);
+	phone.addEventListener('keyup', reset);
 
-function sendData() {
-    const XHR = new XMLHttpRequest();
+	// Other form fields validation
+	const errorName = document.querySelector('.error_name');
+	const errorSurname = document.querySelector('.error_surname');
+	const errorEmail = document.querySelector('.error_email');
+	const errorPhone = document.querySelector('.error_phone');
 
-    // Bind the FormData object and the form element
-    const FD = new FormData( form );
+	function sendData() {
+	    const XHR = new XMLHttpRequest();
 
-    var name = FD.get('name');
-    var surname = FD.get('surname');
-    var email = FD.get('email');
-    var phone = iti.getNumber();
-    FD.set('phone', phone);
+	    // Bind the FormData object and the form element
+	    const FD = new FormData( form );
 
-    // Define what happens on successful data submission
-    XHR.addEventListener( "load", function(event) {
-      alert( event.target.responseText );
+	    var name = FD.get('name');
+	    var surname = FD.get('surname');
+	    var email = FD.get('email');
+	    var phone = iti.getNumber();
+	    FD.set('phone', phone);
 
-    } );
+	    // Define what happens on successful data submission
+	    XHR.addEventListener( "load", function(event) {
+	      alert( event.target.responseText );
 
-    // Define what happens in case of error
-    XHR.addEventListener( "error", function( event ) {
-      alert( 'Oops! Something went wrong.' );
-    } );
+	    } );
 
-    var errorCounter = 0;
-	var nameFormat = /^[a-zA-Z]+$/;
-	var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	    // Define what happens in case of error
+	    XHR.addEventListener( "error", function( event ) {
+	      alert( 'Oops! Something went wrong.' );
+	    } );
 
-	if(name == '') {
-		++errorCounter;
-		errorName.innerHTML = 'This field is required';
-	} else if(name.match(nameFormat)) {
-		errorName.style.color = 'green';
-		errorName.innerHTML = '✓ Valid';
+	    var errorCounter = 0;
+		var nameFormat = /^[a-zA-Z]+$/;
+		var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+		if(name == '') {
+			++errorCounter;
+			errorName.innerHTML = 'This field is required';
+		} else if(name.match(nameFormat)) {
+			errorName.style.color = 'green';
+			errorName.innerHTML = '✓ Valid';
+		}
+
+		if(surname == '') {
+			++errorCounter;
+			errorSurname.innerHTML = 'This field is required';
+			
+		} else if(surname.match(nameFormat)) {
+			errorSurname.style.color = 'green';
+			errorSurname.innerHTML = '✓ Valid';
+		}	
+
+		if(email == '') {
+			++errorCounter;
+			errorEmail.innerHTML = 'This field is required';
+		} else if(email.match(mailFormat)) {
+			errorEmail.style.color = 'green';
+			errorEmail.innerHTML = '✓ Valid';
+		}
+
+		if(phone == '') {
+			++errorCounter;
+			errorPhone.innerHTML = 'This field is required';
+		} else {
+			errorPhone.innerHTML = '';
+		}
+	    
+	    if(errorCounter == 0) {
+	    	// Set up our request
+	    	XHR.open( "POST", "https://spbabiak.github.io/fxytrade/FormDataHandler.php" );
+
+		    // The data sent is what the user provided in the form
+		    XHR.send( FD );
+	    }
 	}
 
-	if(surname == '') {
-		++errorCounter;
-		errorSurname.innerHTML = 'This field is required';
-		
-	} else if(surname.match(nameFormat)) {
-		errorSurname.style.color = 'green';
-		errorSurname.innerHTML = '✓ Valid';
-	}	
+	form.addEventListener('submit', event => {
+		event.preventDefault();
+		sendData();
+	});
+}
 
-	if(email == '') {
-		++errorCounter;
-		errorEmail.innerHTML = 'This field is required';
-	} else if(email.match(mailFormat)) {
-		errorEmail.style.color = 'green';
-		errorEmail.innerHTML = '✓ Valid';
-	}
 
-	if(phone == '') {
-		++errorCounter;
-		errorPhone.innerHTML = 'This field is required';
-	} else {
-		errorPhone.innerHTML = '';
-	}
-    
-    if(errorCounter == 0) {
-    	// Set up our request
-    	XHR.open( "POST", "https://spbabiak.github.io/fxytrade/FormDataHandler.php" );
-
-	    // The data sent is what the user provided in the form
-	    XHR.send( FD );
-    }
-  }
-
-form.addEventListener('submit', event => {
-	event.preventDefault();
-	sendData();
-});
 
