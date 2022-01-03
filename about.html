@@ -218,7 +218,7 @@
 					</div>	
 					<div class="wrapper_form">
 						<h2 class="form_heading">Contact with Us</h2>
-						<form id="main_form" action="" method="post" novalidate>
+						<form id="main_form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" novalidate>
 							<label>
 								<input id="POST-name" type="text" name="name" placeholder="Name">
 								<span class="error_name" aria-live="polite"></span>
@@ -296,8 +296,8 @@
 	</footer>
 	
 	<script type="text/javascript" src="intlTelInput.js"></script>
-	<script type="text/javascript" src="scripts.js"></script>	
 	<script type="text/javascript" src="utils.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>	
 
 </body>
 </html>
