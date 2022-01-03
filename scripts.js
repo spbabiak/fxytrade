@@ -157,57 +157,10 @@ phone.addEventListener('change', reset);
 phone.addEventListener('keyup', reset);
 
 // Other form fields validation
-
-const name = document.getElementById("POST-name");
-const surname = document.getElementById("POST-surname");
-const email = document.getElementById("POST-email");
 const errorName = document.querySelector('.error_name');
 const errorSurname = document.querySelector('.error_surname');
 const errorEmail = document.querySelector('.error_email');
 const errorPhone = document.querySelector('.error_phone');
-const btnSubmit = document.querySelector('.btn_submit');
-btnSubmit.addEventListener('click', event => {
-	// console.log(name.value);
-	 	
-});
-
-// function handleForm(event) { 
-// 	var errorCounter = 0;
-// 	var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-// 	var nameFormat = /^[a-zA-Z]+$/;
-
-// 	if(name.value == '') {
-// 		++errorCounter;
-// 		errorName.innerHTML = 'This field is required';
-// 	} else if(name.value.match(nameFormat)) {
-// 		errorName.style.color = 'green';
-// 		errorName.innerHTML = '✓ Valid';
-// 	}
-
-// 	if(surname.value == '') {
-// 		++errorCounter;
-// 		errorSurname.innerHTML = 'This field is required';
-		
-// 	} else if(surname.value.match(nameFormat)) {
-// 		errorSurname.style.color = 'green';
-// 		errorSurname.innerHTML = '✓ Valid';
-// 	}	
-
-// 	if(email.value == '') {
-// 		++errorCounter;
-// 		errorEmail.innerHTML = 'This field is required';
-// 	} else if(email.value.match(mailFormat)) {
-// 		errorEmail.style.color = 'green';
-// 		errorEmail.innerHTML = '✓ Valid';
-// 	}
-
-// 	if(phone.value == '') {
-// 		++errorCounter;
-// 		errorPhone.innerHTML = 'This field is required';
-// 	} else {
-// 		errorPhone.innerHTML = '';
-// 	}
-// }
 
 function sendData() {
     const XHR = new XMLHttpRequest();
@@ -279,7 +232,6 @@ function sendData() {
 
 form.addEventListener('submit', event => {
 	event.preventDefault();
-	// handleForm();
 	sendData();
 });
 
