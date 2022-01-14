@@ -76,15 +76,15 @@ input {
     right: 0;
 }
 
-.ENG {
+.en {
 	background: center / contain no-repeat url(imgs/english.png);	
 }
 
-.DE {
+.de {
 	background: center / contain no-repeat url(imgs/german.png);	
 }
 
-.IT {
+.it {
 	background: center / contain no-repeat url(imgs/italy.png);
 }
 
@@ -112,7 +112,6 @@ input {
 .mobile_header {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	padding-top: 23px;
 	padding-bottom: 23px;
 }
@@ -124,7 +123,7 @@ input {
     left: 0;
     width: 100%;
     background-color: #fff;
-    z-index: 1;
+    z-index: 2;
 }
 
 .mobile_nav_list li {
@@ -265,8 +264,9 @@ input {
 .features_list {
 	display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
 }
 
 .features_list li {
@@ -887,10 +887,6 @@ input {
 .wrapper_footer_nav .left {
     display: flex;
     flex-wrap: wrap;
-}
-
-.wrapper_footer_nav .logo img {
-	width: 140px;
 }
 
 .footer_nav {
@@ -1599,7 +1595,6 @@ input {
 
 	.wrapper_footer_nav .logo {
 		margin-right: 20px;
-		margin-top: 4px;
 	}
 
 	.icons_features_list li {
@@ -1710,10 +1705,6 @@ input {
 
 	.wrapper {
 		width: 83%;
-	}
-
-	.mobile_header img {
-		width: 280px;
 	}
 	
 	.hero_heading {
@@ -1970,28 +1961,13 @@ input {
 	.products_hero_section {
 		background-image: url('imgs/products_hero_bg_l.png');
 	}
-
-	.footer .logo {
-		margin-right: 10px;
-		margin-top: 13px;
-	}
 }
 
 
 @media only screen and (min-width: 1280px) {
 
-	.wrapper_desktop_nav .logo {
-		display: flex;
-    	align-items: center;
-	}
-
-	.wrapper_desktop_nav .logo a {
-		margin-top: 5px;
-    	margin-right: 25px;
-	}
-
-	.wrapper_desktop_nav img {
-		width: 180px;
+	.main_hero_section .wrapper_hero_text {
+    	width: 745px;
 	}
 
 	.wrapper_hero_text {
@@ -2226,14 +2202,6 @@ input {
 	#about_our_commitment .icons_features_list li {
 		margin-bottom: 0;
 	}
-
-	.wrapper_footer_nav .logo img {
-    	width: 300px;
-	}
-
-	.footer .logo {
-        margin-top: 0;
-	}
 }
 
 @media only screen and (min-width: 1360px) {
@@ -2241,6 +2209,12 @@ input {
 	    width: 50%;
 	    align-items: unset;
 	}
+}
+
+@media only screen and (min-width: 1440px) {
+	/*.form_icons {
+		width: 44%;
+	}*/
 }
 
 @media only screen and (min-width: 1530px) {
@@ -2264,16 +2238,6 @@ input {
 	    width: 920px;
 	    border-right: 57px solid transparent;
    	}	
-
-   	.wrapper_desktop_nav img {
-		width: 300px;
-	}
-
-	.wrapper_desktop_nav .logo a,
-	.wrapper_footer_nav .logo a {
-   		margin-top: 5px;
-    	margin-right: 40px;
-    }
 }
 
 @media only screen and (min-width: 1640px) {
