@@ -12,26 +12,35 @@
 	<title>fxytrade</title>
 </head>
 <body>
+	<?php 
+	if(!isset($_GET['langID'])) 
+		$lang = 'en';
+	else
+		$lang = $_GET['langID'];
+
+	include('locale/' . $lang . '.php');
+	?>
 	<header class="header">
 		<div class="wrapper">
 			<div class="mobile_header">
 				<div class="logo">
-					<a href="index.html">
-						<img src="imgs/logo_blue.jpg" width="160px" alt="">
+					<a href="index.php">
+						<img src="imgs/logo.png" width="157px" height="41px" alt="">
 					</a>
-					<span class="arrow_langs"></span>
-					<ul class="langs">
-						<li class="ENG active"></li>
-						<li class="DE"></li>
-						<li class="IT"></li>
-					</ul>
-					<div class="hidden_langs">
-						<ul class="langs_column">
-							<li></li>
-							<li></li>
-							<li></li>
+					
+						<span class="arrow_langs"></span>
+						<ul class="langs">
+							<li class="en active"></li>
+							<li class="de"></li>
+							<li class="it"></li>
 						</ul>
-					</div>
+						<div class="hidden_langs">
+							<ul class="langs_column">
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
 						
 				</div>
 
@@ -49,9 +58,9 @@
 
 			<div class="mobile_nav">
 					<ul class="mobile_nav_list">
-						<li><a class="mobile_nav_item" href="index.html">Home</a></li>
-						<li><a class="mobile_nav_item" href="products.html">Trading instruments</a></li>
-						<li><a class="mobile_nav_item" href="about.html">About us</a></li>
+						<li><a class="mobile_nav_item" href="index.php"><?php echo $langArray['menu']['home']; ?></a></li>
+						<li><a class="mobile_nav_item" href="products.php"><?php echo $langArray['menu']['products']; ?></a></li>
+						<li><a class="mobile_nav_item" href="about.php"><?php echo $langArray['menu']['about']; ?></a></li>
 					</ul>
 					<div class="mobile_nav_cta">
 							<div class="left_cta">
@@ -72,7 +81,7 @@
 		</div>			
 	</header>
 
-	<section id="hero_section" class="products_hero_section">
+	<section id="hero_section" class="about_hero_section">
 		<div class="bar"></div>
 		<div class="wrapper">
 
@@ -80,30 +89,31 @@
 			
 				<div class=wrapper_desktop_nav>	
 					<div class="logo">
-						<a href="index.html">
-							<img src="imgs/logo_blue.jpg" width="280px" alt="">
+						<a href="index.php">
+							<img src="imgs/logo.png" width="157px" height="41px" alt="">
 						</a>
-						<ul class="desktop_nav_list">
-							<li><a class="desktop_nav_item" href="index.html">Home</a></li>
-							<li><a class="desktop_nav_item" href="products.html">Trading instruments</a></li>
-							<li><a class="desktop_nav_item" href="about.html">About us</a></li>
-						</ul>
 					</div>
-					
+
+					<ul class="desktop_nav_list">
+						<li><a class="desktop_nav_item" href="index.php"><?php echo $langArray['menu']['home']; ?></a></li>
+						<li><a class="desktop_nav_item" href="products.php"><?php echo $langArray['menu']['products']; ?></a></li>
+						<li><a class="desktop_nav_item" href="about.php"><?php echo $langArray['menu']['about']; ?></a></li>
+					</ul>
+						
 					<div class="social_btns">
-						<ul class="social_icons_list">
-							<li><a class="icon_facebook" href="#"></a></li>
-							<li><a class="icon_twitter" href="#"></a></li>
-							<li><a class="icon_youtube" href="#"></a></li>
-						</ul>
-					</div>
+							<ul class="social_icons_list">
+								<li><a class="icon_facebook" href="#"></a></li>
+								<li><a class="icon_twitter" href="#"></a></li>
+								<li><a class="icon_youtube" href="#"></a></li>
+							</ul>
+						</div>
 					
 					<div class="desktop_cta">
 						<a class="btn_login" href="#">Log in</a>
 						<ul class="langs_row">
-							<li class="ENG active"></li>
-							<li class="DE"></li>
-							<li class="IT"></li>
+							<li class="en"></li>
+							<li class="de"></li>
+							<li class="it"></li>
 						</ul>
 					</div>
 				</div>
@@ -113,62 +123,68 @@
 			</div>
 		<div class="wrapper">
 			<div class="wrapper_hero_text">
-				<div class="wrapper_text">
-					<h2 class="secondary_heading">Master <span class="text_higlights_on_dark">your trades</span></h2>
-					<p class="secondary_description">Sometimes it’s better to take a path with the least amount of resistance and not to swim against the tide simply because of the fact that it’s more comfortable and user-friendly. MetaTrader 4 (MT4) is a trading platform that manifests both these qualities. It’s the World’s most used trading platform which can be launched on Windows as well as on mobile devices (Android, iOS).</p>
+				<div class="about_hero_text_content">
+					<h2 class="secondary_heading"><span class="text_higlights_on_dark">OUR MISSION </span>IS TO BRING TRADING TO THE MASSE</h2>
+					<p class="secondary_description">We do so by providing an intuitive trading platform designed with the latest technological advancements that’s geared towards new traders as well as professionals.</p>
+					<p class="secondary_description">We place great emphasis on education, providing a well-rounded library of V.O.D. seminars, webinars, daily news, analysis and more. Our customer service and support is always available to meet your needs, and our account managers know that your success is our success.</p>
 				</div>
-				<ul class="btn_apps_list">
-					<li><a class="btn_google_play" href="#"></a></li>
-					<li><a class="btn_app_store" href="#"></a><</li>
-					<li><a class="btn_ms_store" href="#"></a></li>
-				</ul>
+				<div class="about_hero_img_content">
+					<img class="img_globe" src="imgs/globe.png" alt="">
+				</div>
 			</div>
 		</div>
 	</section>
-	<section id="features_section">
+
+	<section id="about_vision_section">
+		<div class="subsection">
+			<div class="wrapper">
+				<div class="wrapper_subsection">
+					<div class="wrapper_text">
+						<h2 class="secondary_heading"><span class="text_higlights_on_white">OUR VISION</span></h2>
+						<p class="secondary_description">Surmontfx was established as a way for traders to invest in the financial markets on a platform that is user friendly.</p>
+						<p class="secondary_description">Your success is a testament of our commitment to any investor who chooses to trade with Surmontfx. That is why we strive to provide you with an expanding asset selection, dedicated support and personal assistance.</p>
+					</div>
+					<div class="wrapper_img">
+						<img class="img_vision" src="imgs/our_vision_img.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="about_our_commitment">
 		<div class="wrapper">
 			<div class="wrapper_section_content">
+				<div class="wrapper_text">
+					<h2 class="secondary_heading">OUR <span class="text_higlights_on_white">COMMITMENT</span></h2>
+				</div>
 				<ul class="icons_features_list">
 					<li>
-						<div class="icon_flexibility"></div>
+						<div class="icon_opportunities"></div>
 						<div class="wrapper_icons_features_text">
-							<span class="icon_heading">FLEXIBILITY</span>
-							<span class="icon_text">MT4 allows you to trade currency pairs, CFDs, commodities and other highly liquid assets.</span>
+							<span class="icon_heading">CONNECTING OPPORTUNITIES</span>
+							<span class="icon_text">Opportunities arise daily and are numerous, and we provide you with the means to connect from one to the other</span>
 						</div>
 					</li>
 					<li>
-						<div class="icon_security"></div>
+						<div class="icon_control"></div>
 						<div class="wrapper_icons_features_text">
-							<span class="icon_heading">SECURITY</span>
-							<span class="icon_text">MT4 is set with 129-bit encryption software, which protects data between traders and servers.</span>
+							<span class="icon_heading">MAINTAIN CONTROL</span>
+							<span class="icon_text">Maintaining control is the ability to drive your success however – and whichever – way you want.</span>
 						</div>
 					</li>
 					<li>
-						<div class="icon_advisors"></div>
+						<div class="icon_support"></div>
 						<div class="wrapper_icons_features_text">
-							<span class="icon_heading">EXPERT ADVISORS</span>
-							<span class="icon_text">MT4 allows you to trade currency pairs, CFDs, commodities and other highly liquid assets.</span>
+							<span class="icon_heading">PERSONAL PROFESSIONAL SUPPORT</span>
+							<span class="icon_text">When market volatility equals trading opportunities, count on steady, dedicated support to assist you every step of the way</span>
 						</div>
 					</li>
 					<li>
-						<div class="icon_communication"></div>
+						<div class="icon_choice"></div>
 						<div class="wrapper_icons_features_text">
-							<span class="icon_heading">COMMUNICATION</span>
-							<span class="icon_text">MT4 links brokers and traders ensuring instant communication.</span>
-						</div>
-					</li>
-					<li>
-						<div class="icon_ux"></div>
-						<div class="wrapper_icons_features_text">
-							<span class="icon_heading">USER EXPERIENCE</span>
-							<span class="icon_text">MT4 offers an easy-to-use interface to both beginner and experienced traders.</span>
-						</div>
-					</li>
-					<li>
-						<div class="icon_resources"></div>
-						<div class="wrapper_icons_features_text">
-							<span class="icon_heading">LOW RESOURCES</span>
-							<span class="icon_text">MT4 requires minimal resources to perform at an optimal rate and great speed.</span>
+							<span class="icon_heading">FREEDOM OF CHOICE</span>
+							<span class="icon_text">Benefit from tailored solutions that meet your needs. Over 100 tradable assets and unlimited market access</span>
 						</div>
 					</li>
 				</ul>
@@ -176,64 +192,15 @@
 		</div>
 	</section>
 
-	<section id="products_about_section">
-		<div class="subsection">
-			<div class="wrapper">
-				<div class="wrapper_subsection">
-					<div class="wrapper_text">
-						<h2 class="secondary_heading">FXITRADE <span class="text_higlights_on_white">MOBILE</span></h2>
-						<div class="subheading">Try the new FXITrade mobile now</div>
-						<p class="secondary_description">Traders can access their mobile trading system via any mobile browser. FXITrade Mobile Trading System is intuitive, user friendly and reliable. Brokers have full control over the URL the client sees and can easily embed the system into their mobile marketing campaigns.</p>
-					</div>
-					<div class="wrapper_img">
-						<img class="img_mobile" src="imgs/products_mobile_img.png" alt="">
-					</div>
-				</div>
+	<section id="cta_section">
+		<div class="wrapper">
+			<div class="wrapper_section_content">
+			<div class="wrapper_text">
+				<h2 class="secondary_heading">READY TO TRADE?</h2>
+				<p class="secondary_description">Quick and easy to get started in only a few small steps. We do all the job for you.</p>
 			</div>
+			<a class="btn_register" href="#">Register</a>
 		</div>
-
-		<div class="subsection">
-			<div class="wrapper">
-				<div class="wrapper_subsection row_reverse">
-					<div class="wrapper_text">
-						<h2 class="secondary_heading">FXITRADE <span class="text_higlights_on_white">FIX API</span></h2>
-						<div class="subheading">A FIX API to Trade via FXITRADE Accounts</div>
-						<p class="secondary_description">FIX API using FIX Protocol 4.4 designed for real-time, pricing and execution. You will get full range of trading order types. All trades sent to FXITrade FIX API are synced with the Condor Back Office and can be used in tandem with FXITrade Terminal, FXITrade Web and FXITrade Mobile. In order to establish and maintain FIX connectivity, you must have an application that manages a network connection and which sends/receives FIX messages.</p>
-					</div>
-					<div class="wrapper_img">
-						<img class="img_api" src="imgs/products_api_img.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="subsection bg_web">
-			<div class="wrapper">
-				<div class="wrapper_subsection">
-					<div class="wrapper_text">
-						<h2 class="secondary_heading">FXITRADE <span class="text_higlights_on_white">WEB</span></h2>
-						<p class="secondary_description">FXITrade Web provides fast and easy access to clients Condor account from every browser.</p>
-						<a class="btn_download" href="#">Go to Platform</a>
-					</div>
-					<div class="wrapper_img">
-						<img class="img_web" src="imgs/products_web_img.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="subsection">
-			<div class="wrapper">
-				<div class="wrapper_subsection row_reverse">
-					<div class="wrapper_text">
-						<h2 class="secondary_heading">FXITRADE <span class="text_higlights_on_white">OVERVIEW</span></h2>
-						<p class="secondary_description">Condor is a complete trading platform solution for Forex and CFD brokers to offer their traders. The platform is packed with a full range of features to cater to each and every investment preference imaginable.</p>
-					</div>
-					<div class="wrapper_img">
-						<img class="img_overview" src="imgs/products_overview_img.png" alt="">
-					</div>
-				</div>
-			</div>
 		</div>
 	</section>
 
@@ -260,7 +227,7 @@
 					</div>	
 					<div class="wrapper_form">
 						<h2 class="form_heading">Contact with Us</h2>
-						<form id="main_form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" novalidate>
+						<form id="main_form" action="" method="post" novalidate>
 							<label>
 								<input id="POST-name" type="text" name="name" placeholder="Name">
 								<span class="error_name" aria-live="polite"></span>
@@ -292,20 +259,19 @@
 		</div>	
 	</section>
 
-
 	<footer class="footer">
 		<div class="footer_top">
 			<div class="wrapper">
 				<div class="wrapper_footer_nav">
 					<div class="left">
 						<div class="logo">
-							<a href="index.html">
-								<img src="imgs/logo_blue.jpg" width="300px" alt="">
+							<a href="index.php">
+								<img src="imgs/logo_footer.png" alt="">
 							</a>
 						</div>
 						<div class="footer_nav">
-							<a class="footer_nav_item" href="products.html">Trading instruments</a>
-							<a class="footer_nav_item" href="about.html">About us</a>
+							<a class="footer_nav_item" href="products.php"><?php echo $langArray['menu']['products']; ?></a>
+							<a class="footer_nav_item" href="about.php"><?php echo $langArray['menu']['about']; ?></a>
 						</div>
 					</div>
 				
@@ -337,11 +303,10 @@
 		</div>
 		<div class="copyrights">© 2020 BARCLAYS BANK UK AND HSBC BANK. All Rights Reserved</div>	
 	</footer>
-
-
+	
 	<script type="text/javascript" src="intlTelInput.js"></script>
-	<script type="text/javascript" src="utils.js"></script>
 	<script type="text/javascript" src="scripts.js"></script>	
+	<script type="text/javascript" src="utils.js"></script>
 
 </body>
 </html>
